@@ -99,7 +99,7 @@ ul{
 .main{
   width: 1440px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   background-color: rgb(255, 255, 255);
 }
@@ -110,12 +110,51 @@ ul{
   background-color: rgba(240, 239, 235, 1);
 }
 
-.unique{
-  display: block;
+.main__unique{
+  display: flex;
+  flex-direction: column;
   width: 1280px;
   height: 709px;
+  justify-content:flex-start;
+  align-items: center;
   background-color: transparent;
 }
+
+.main__unique> p{
+  font: 400 30px/30px 'Roboto', sans-serif;
+}
+
+.unique__line{
+  width: 1280px;
+  height: 157px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  align-items: flex-end;
+  top: 165px;
+  /* border: 1px dashed black; */
+}
+
+.unique__point{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  font: 700 30px/30px 'Roboto', sans-serif;
+}
+
+.unique__point-first::before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(255, 127, 127);
+    position: absolute;
+    top: -96px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
 .qoutes{
   display: block;
