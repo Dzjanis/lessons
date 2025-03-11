@@ -25,3 +25,47 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/* header */
+
+.header{
+  width: 1440px;
+  height: 56px;
+}
+
+.header__menu{
+  display: flex;
+  width: 1064px;
+  height: 56px;
+  border: 1px solid black;
+  margin: 0 calc(50% - 532px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__items{
+  display: flex;
+}
+
+.menu__item{
+  margin-right: 28px;
+
+}
+
+.menu__items> .menu__item:last-child{
+  margin-right: none;
+}
+
+.menu__link{
+  font: 700 16px/26.4px 'Roboto', sans-serif;
+  color: rgba(28, 27, 27, 1);
+}
