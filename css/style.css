@@ -140,7 +140,7 @@ ul{
 }
 
 .feature__point{
-  width: 21.25Rem;
+  width: 21.25rem;
   font: 700 30px/30px 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -148,6 +148,13 @@ ul{
   position: relative;
   margin: 0 75px;
 
+}
+.feature__point:nth-child(2){
+  margin: 0 99px;
+}
+
+.feature__point-first{
+  white-space: nowrap;
 }
 
 .feature__point-first::before{
