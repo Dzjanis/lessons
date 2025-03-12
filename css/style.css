@@ -50,7 +50,6 @@ ul{
   justify-content: space-between;
   align-items: center;
   position: relative;
-  border: 1px dashed black;
 }
 
 .menu__items, .menu__buttons{
@@ -102,6 +101,7 @@ ul{
   flex-direction: column;
   position: relative;
   background-color: rgb(255, 255, 255);
+  align-items: center;
 }
 
 .main__gray{
@@ -117,7 +117,9 @@ ul{
   height: 709px;
   justify-content:flex-start;
   align-items: center;
-  background-color: transparent;
+  position: relative;
+  margin-top: 190px;
+  margin-bottom: 426px;
 }
 
 .main__unique> p{
@@ -128,19 +130,21 @@ ul{
   width: 1280px;
   height: 157px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   position: relative;
   align-items: flex-end;
   top: 165px;
-  /* border: 1px dashed black; */
+  margin-bottom: 110px;
+  padding:0 108px;
 }
 
 .unique__point{
+  font: 700 30px/30px 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  font: 700 30px/30px 'Roboto', sans-serif;
+  margin: 0 75px;
 }
 
 .unique__point-first::before{
@@ -149,12 +153,30 @@ ul{
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background-color: rgb(255, 127, 127);
     position: absolute;
     top: -96px;
     left: 50%;
     transform: translateX(-50%);
   }
+
+.unique__point-first.uniq1::before{
+  background-color: rgba(33, 247, 236, 1);
+}
+.unique__point-first.uniq2::before{
+  background-color: rgba(51, 211, 188, 1);
+}
+.unique__point-first.uniq3::before{
+  background-color: rgba(24, 165, 198, 1);
+}
+.unique__point-first.uniq4::before{
+  background-color: rgba(211, 143, 98, 1);
+}
+.unique__point-first.uniq5::before{
+  background-color: rgba(249, 76, 67, 1);
+}
+.unique__point-first.uniq6::before{
+  background-color: rgba(211, 153, 255, 1);
+}
 
 .qoutes{
   display: block;
