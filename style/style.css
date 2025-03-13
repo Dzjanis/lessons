@@ -1,4 +1,18 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/montserrat-v29-cyrillic_latin-regular.woff2') format('woff2');
+}
 
+@font-face {
+  font-display: swap;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/montserrat-v29-cyrillic_latin-600.woff2') format('woff2');
+}
 
 * {
   margin: 0;
@@ -9,6 +23,8 @@
 }
 
 body {
+  width: 1350px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -21,8 +37,6 @@ ul {
 
 .ideas{
   width: 1309px;
-    height: 569px;                 /* не забыть убрать */
-    border: 1px solid black;       /* тоже убрать */
   margin: 0 auto;                /* центрирую относительно body */
   display: flex;
   flex-direction: column;
@@ -36,6 +50,7 @@ ul {
 }
 
 .ideas__card {
+  width: 312px;
   height: 420px;
   display: flex;
   flex-direction: column;
@@ -46,6 +61,7 @@ ul {
 }
 
 .card__date {
+  margin-right: 30px;
   align-self: flex-end;
   color: #BE1736;
   position: relative;
