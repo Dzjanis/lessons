@@ -24,11 +24,16 @@
 
 body {
   width: 1350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: 'Montserrat', sans-serif;
 }
 
 a {
   text-decoration: none;
+  color: #000000FF;
+  font: 400 14px/100% "Montserrat", sans-serif;
 }
 
 ul {
@@ -37,38 +42,86 @@ ul {
 
 .ideas {
   width: 1309px;
-  margin: 0 auto; /* центрирую относительно body */
+  margin: 47px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  position: relative;
   background-color: #ffffff;
 }
 
 .ideas__title {
+  margin-bottom: 20px;
+  font: 600 24px/100% "Montserrat", sans-serif;
   align-self: flex-start;
+}
+
+.ideas__cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .ideas__card {
   width: 312px;
   height: 420px;
+  border-radius: 5px;
+  padding: 27px 7px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  gap: 20px;
-  border: 1px solid black; /* тоже убрать */
+  gap: 30px;
+
+  &:hover {
+    box-shadow: 0px 6px 10px 1px rgba(115, 115, 115, 0.3); /* вынести в :hover */
+  }
 }
 
 .card__date {
+  font: 600 12px/100% "Montserrat", sans-serif;
   margin-right: 30px;
   align-self: flex-end;
   color: #BE1736;
   position: relative;
-  top: 20px;
+  top: 10px;
+}
+
+.card__img {
+  width: 126px;
+  height: 30px;
 }
 
 .card__title {
+  font: 600 16px/100% "Montserrat", sans-serif;
   text-align: center;
+}
+
+.card__prices {
+  font: 400 14px/20px "Montserrat", sans-serif;
+  align-self: flex-start;
+}
+
+.card__prices > span {
+  font-weight: 600;
+}
+
+.card__prices > span:nth-child(7) {
+  color: #1c33ea;
+}
+
+.card__link, .ideas__link {
+  display: flex;
+  width: 262px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border: 1px solid #000000; /* вынести в :hover */
+  }
 }
 
