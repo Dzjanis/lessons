@@ -142,8 +142,9 @@ ul {
   margin-bottom: 52px;
 }
 
-.main__feature > p {
+.feature__title{
   font: 400 30px/30px 'Roboto', sans-serif;
+  text-align: center;
 }
 
 .feature__line {
@@ -215,6 +216,11 @@ ul {
   margin: 50px;
 }
 
+.quotes__title{
+  font: 700 30px/100% 'Roboto', sans-serif;
+  text-align: center;
+}
+
 .quotes__line {
   width: 1280px;
   display: flex;
@@ -254,12 +260,12 @@ ul {
   margin-bottom: 44px;
 }
 
-.quotes__item_auth > span {
+.quotes__item_auth {
   font: 400 19px/100% 'Roboto', sans-serif;
+}
 
-  &:last-child {
-    font-size: 20px;
-  }
+.quotes__item_auth {
+  font-size: 20px;
 }
 
 .quotes__item_link {
