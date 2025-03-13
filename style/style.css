@@ -35,9 +35,9 @@ ul {
   list-style-type: none;
 }
 
-.ideas{
+.ideas {
   width: 1309px;
-  margin: 0 auto;                /* центрирую относительно body */
+  margin: 0 auto; /* центрирую относительно body */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,7 +45,7 @@ ul {
   background-color: #ffffff;
 }
 
-.ideas__title{
+.ideas__title {
   align-self: flex-start;
 }
 
@@ -57,7 +57,7 @@ ul {
   align-items: center;
   justify-content: space-evenly;
   gap: 20px;
-  border: 1px solid black;       /* тоже убрать */
+  border: 1px solid black; /* тоже убрать */
 }
 
 .card__date {
