@@ -133,23 +133,17 @@ ul {
 }
 
 .ideas__triangle_top, .ideas__triangle_bottom {
-  background-color: #0E27730D;
   position: absolute;
   z-index: 102;
 }
 
 .ideas__triangle_top{
-  width: 128px;
-  height: 88px;
-  top: 0%;
-  left: calc(100% - 64px);
-  transform: rotateZ(139deg);
+  top: -47px;
+  left: 1184px;
 }
 
 .ideas__triangle_bottom{
-  width: 85px;
-  height: 80px;
-  top: 70%;
-  left: calc(0% + 42px);
-  transform: rotateZ(139deg);
+  top: 423px;
+  left: -22px;
 }
+
