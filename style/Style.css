@@ -4,7 +4,7 @@
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 400;
-    src: url('../Fonts/mulish-v13-cyrillic_latin-regular.woff2') format('woff2'); 
+    src: url('../fonts/mulish-v13-cyrillic_latin-regular.woff2') format('woff2');
   }
   
   /* mulish-700 - cyrillic_latin */
@@ -13,7 +13,7 @@
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;
-    src: url('../Fonts/mulish-v13-cyrillic_latin-700.woff2') format('woff2');
+    src: url('../fonts/mulish-v13-cyrillic_latin-700.woff2') format('woff2');
   }
 
 *{
