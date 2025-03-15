@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f17540c1-2fd1-4494-a64e-20f5d9dc7580" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +31,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "lesson-5",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/FrontEnd/lessons",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -59,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741876202534</updated>
       <workItem from="1741876203768" duration="2964000" />
-      <workItem from="1741972777316" duration="4417000" />
+      <workItem from="1741972777316" duration="5045000" />
     </task>
     <servers />
   </component>
