@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson3 | Practice</title>
+
+    <link href="/style/Style.css" rel="stylesheet" type="text/css">
+
+    <script src="/Scripts/scripts.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <a href="#" class="header__logo">
+        <img src="/Images/02.svg" class="header__logo-img" alt="Logo" 
+        title="Page Logo">
+    </a>
+    <nav class="menu">
+        <ul class="menu__list">
+            <li class="menu__item">
+                <a href="#" class="menu__link" 
+                onclick="toggleActive(this)">Home</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link" 
+                onclick="toggleActive(this)">About</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link" 
+                onclick="toggleActive(this)">Events</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link" 
+                onclick="toggleActive(this)">News</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class="menu__link" 
+                onclick="toggleActive(this)">Contacts</a>
+            </li>
+        </ul>
+    </nav>
+    <button type="button" class="header__btn">Request an Issues</button>
+</header>
+<main class="content">
+    <section class="preview">
+        <h1 class="preview__title">Development Of A Smart 
+                                    <br>City To Be More Organized</h1>
+        <p class="preview__subtitle">Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit. Lacus ut condimentum <br>feugiat at urna eu donec. 
+            Blandit suscipit ir company</p>
+        <a href="#" class="preview__link">Learn More</a>
+        
+        <ul class="advantages">
+
+            <li class="advantages__item" id="adv1">
+                <div class="advantages__icon"></div>
+                <h3 class="advantages__ttl">Business</h3>
+                <p class="advantages__dsc">Lorem ipsum dolor sit amet, 
+                    virox consectetur adipiscing elit. Lacus ut 
+                    condimentum feugiat at urn et.</p>
+                <a href="#adv1" class="advantages__link" 
+                onclick="addActiv(this)">More info</a>
+            </li>
+
+            <li class="advantages__item" id="adv2">
+                <div class="advantages__icon"></div>
+                <h3 class="advantages__ttl">Resident</h3>
+                <p class="advantages__dsc">Lorem ipsum dolor sit amet, 
+                    virox consectetur adipiscing elit. Lacus ut 
+                    condimentum feugiat at urn et.</p>
+                <a href="#adv2" class="advantages__link" 
+                onclick="addActiv(this)">More info</a>
+            </li>
+
+            <li class="advantages__item" id="adv3">
+                <div class="advantages__icon"></div>
+                <h3 class="advantages__ttl">Visitors</h3>
+                <p class="advantages__dsc">Lorem ipsum dolor sit amet, 
+                    virox consectetur adipiscing elit. Lacus ut 
+                    condimentum feugiat at urn et.</p> 
+                <a href="#adv3" class="advantages__link" 
+                onclick="addActiv(this)">More info</a>
+            </li>
+
+            <li class="advantages__item" id="adv4">
+                <div class="advantages__icon"></div>
+                <h3 class="advantages__ttl">History</h3>
+                <p class="advantages__dsc">Lorem ipsum dolor sit amet, 
+                    virox consectetur adipiscing elit. Lacus ut 
+                    condimentum feugiat at urn et.</p>
+                <a href="#adv4" class="advantages__link" 
+                onclick="addActiv(this)">More info</a>
+            </li>
+        </ul>
+    </section>
+    <section class="functional">
+        <div class="calc__wrap">
+            <div class="calc__display" id="current_operation" value="10+10"></div>
+            <div class="calc__display" id="result">0</div>
+            <button class="calc__button reset" value="null">C</button>
+            <button class="calc__button backSpace" value="BS">-</button>
+            <button class="calc__button function" value="%">%</button>
+            <button class="calc__button function" value="/">/</button>
+            <button class="calc__button number" value="1">1</button>
+            <button class="calc__button number" value="2">2</button>
+            <button class="calc__button number" value="3">3</button>
+            <button class="calc__button function" value="*">*</button>
+            <button class="calc__button number" value="4">4</button>
+            <button class="calc__button number" value="5">5</button>
+            <button class="calc__button number" value="6">6</button>
+            <button class="calc__button function"value="-">-</button>
+            <button class="calc__button number" value="7">7</button>
+            <button class="calc__button number" value="8">8</button>
+            <button class="calc__button number" value="9">9</button>
+            <button class="calc__button function" value="+">+</button>
+            <button class="calc__button number" value=",">,</button>
+            <button class="calc__button number" value="0">0</button>
+            <button class="calc__button calculate">=</button>
+
+        </div>  
+    </section>
+</main>
+</body>
+</html>
