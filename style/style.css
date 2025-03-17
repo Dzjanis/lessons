@@ -101,7 +101,7 @@ body{
   height: 880px;
   padding: 164px calc(50% - 720px);
   margin-bottom: 20px; 
-  background-image: url(/images/img3.jpg);
+  background-image: url(../images/img3.jpg);
 }
 
 .preview__title{
