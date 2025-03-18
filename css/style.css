@@ -1,0 +1,84 @@
+@font-face {
+   font-family: "GothamPro";
+   src:local("GothamPro"),
+   url("fonts/GothamPro.woff") format("woff");
+   font-weight: 400;
+}
+
+@font-face {
+   font-family: "GothamPro";
+   src:local("GothamPro"),
+   url("fonts/GothamPro-Bold.woff") format("woff");
+   font-weight: 700;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   border: none;
+   outline: 0;
+   box-sizing: border-box;
+ }
+
+:root{
+   --font: "GothamPro", sans-serif;
+}
+
+body{
+   width: 1920px;
+   background-color: #cccccc;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+}
+
+.card{
+   width: 290px;
+   background-color: #ffffff;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.card__img{
+   width: 100%;
+   object-fit: cover;
+}
+
+.card__port{
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+   margin-top: -50px;
+}
+
+.card__name{
+   font: 700 14px/100% var(--font);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 10px;
+   width: 230px;
+   text-align: center;
+   margin-top: 16px;
+
+   &:after{
+      content:"";
+      margin-left: 4px;
+      width: 12px;
+      height: 12px;
+      background-image: url("../img/img3.png");
+      background-size: contain;
+      background-position: center;
+   }
+}
+
+.card__content{
+   margin-top: 10px;
+   font: 400 10px/150% var(--font);
+   width: 240px;
+   text-align: center;
+}
+
