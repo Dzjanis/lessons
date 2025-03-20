@@ -56,5 +56,11 @@ body{
 }
 
 .cards__title{
+  font: 600 40px/140% var(--font);
+  color: #333333;
+}
 
+.cards__list{
+  display: flex;
+  flex-wrap: wrap;
 }
