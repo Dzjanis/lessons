@@ -114,11 +114,11 @@ ul {
   align-self: flex-start;
 }
 
-.card__prices > span {
+.card__prices> span {
   font-weight: 600;
 }
 
-.card__prices > span:nth-child(7) {
+.card__prices span:nth-of-type(4) {
   color: #1c33ea;
 }
 
