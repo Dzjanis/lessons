@@ -55,12 +55,56 @@ body{
   transform: translate(-50%, 0);
 }
 
-.cards__title{
+.cards__title {
+  width: 805px;
+  margin: 100px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font: 600 40px/140% var(--font);
   color: #333333;
+
+  &::after {
+    content: '';
+    display: block;
+    position: relative;
+    transform: translate(0, 26px);
+    width: 100px;
+    border: 2px solid #2B9AD6;
+  }
 }
 
 .cards__list{
+  list-style-type: none;
   display: flex;
+  justify-content: center;
+  gap: 169px;
   flex-wrap: wrap;
+  margin: 60px 291px 100px;
+}
+
+.card__item{
+  width: 235px;
+}
+
+.list__card{
+  width: 235px;
+  flex: 1 1 calc(33% - 169px);
+}
+
+.item__img{
+  width: 220px;
+  height: 224px;
+  object-fit: cover;
+}
+
+.img_dsc{
+  width: 235px;
+  font: 400 17px/150% var(--font);
+  color: #5F5F5F;
+
+  & > strong{
+    font: 700 24px/140% var(--font);
+    color: #194F94;
+  }
 }
