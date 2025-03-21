@@ -96,13 +96,13 @@ body {
   flex: 0 1 235px;
   z-index: 10;
 
-  &:nth-child(2) {
-    margin: 0;
-  }
+  /*&:nth-child(2) {*/
+  /*  margin: 0;*/
+  /*}*/
 
-  &:nth-child(3) {
-    margin-right: 0;
-  }
+  /*&:nth-child(3) {*/
+  /*  margin-right: 0;*/
+  /*}*/
 }
 
 .item__img {
@@ -142,6 +142,7 @@ body {
   position: absolute;
   width: 293px;
   height: 361px;
+  background-image: linear-gradient(#00277B, #0553B1);
   left: -36px;
   top: -13px;
   z-index: 9;
