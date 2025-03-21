@@ -123,13 +123,33 @@ body {
   }
 }
 
-.cards__logo {
+.cards__logo, .cards__logo-hover{
   display: block;
   position: absolute;
   top: 149px;
   left: 159px;
   border-radius: 50%;
   fill: #194F94;
+}
+
+.cards__logo-hover{
+  opacity: 0;
+}
+
+.cards__items:hover {
+
+  & .cards__logo-hover{
+    opacity: 1;
+  }
+
+  & .img__dsc{
+   color: #fff;
+  }
+
+  & .img__dsc> strong{
+    color: #fff;
+  }
+
 }
 
 
