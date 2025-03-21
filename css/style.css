@@ -76,6 +76,8 @@ body {
   }
 }
 
+/* cards_items style*/
+
 .cards__list {
   list-style-type: none;
   display: flex;
@@ -90,6 +92,7 @@ body {
 }
 
 .cards__item {
+  position: relative;
   flex: 0 1 235px;
 
   &:nth-child(2) {
@@ -102,12 +105,15 @@ body {
 }
 
 .item__img {
+  position: relative;
   width: 220px;
   height: 224px;
   object-fit: cover;
+  background-color: #E1E8EE;
+  border-radius: 50%;
 }
 
-.img_dsc {
+.img__dsc {
   font: 400 17px/150% var(--font);
   color: #5F5F5F;
 
@@ -125,3 +131,9 @@ body {
   border-radius: 50%;
   fill: #194F94;
 }
+
+
+
+
+
+
