@@ -94,6 +94,7 @@ body {
 .cards__item {
   position: relative;
   flex: 0 1 235px;
+  z-index: 10;
 
   &:nth-child(2) {
     margin: 0;
@@ -130,9 +131,20 @@ body {
   left: 159px;
   border-radius: 50%;
   fill: #194F94;
+  z-index: 10;
 }
 
 .cards__logo-hover{
+  opacity: 0;
+}
+
+.cards__item-hover{
+  position: absolute;
+  width: 293px;
+  height: 361px;
+  left: -36px;
+  top: -13px;
+  z-index: 9;
   opacity: 0;
 }
 
@@ -148,6 +160,14 @@ body {
 
   & .img__dsc> strong{
     color: #fff;
+  }
+
+  & .item__img{
+    background-color: transparent;
+  }
+
+  & .cards__item-hover{
+    opacity: 1;
   }
 
 }
