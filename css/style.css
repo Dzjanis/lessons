@@ -5,7 +5,6 @@
   font-weight: 400;
   src: url('../fonts/roboto-v47-cyrillic_latin-regular.woff2') format('woff2');
 }
-
 @font-face {
   font-display: swap;
   font-family: 'Roboto';
@@ -13,7 +12,6 @@
   font-weight: 700;
   src: url('../fonts/roboto-v47-cyrillic_latin-700.woff2') format('woff2');
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -21,32 +19,25 @@
   outline: 0;
   box-sizing: border-box;
 }
-
 a {
   text-decoration: none;
 }
-
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 cite {
   font-style: normal;
 }
-
 ul {
   list-style-type: none;
 }
-
 /* header style*/
-
 .header {
   width: 1440px;
   height: 56px;
 }
-
 .header__menu {
   display: flex;
   width: 1064px;
@@ -56,49 +47,40 @@ ul {
   align-items: center;
   position: relative;
 }
-
 .menu__items,
 .menu__buttons {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .menu__item {
   margin-right: 28px;
-
   &:last-child {
     margin-right: 0;
   }
 }
-
 .menu__link {
   font: 700 16px/26.4px 'Roboto', sans-serif;
   color: rgba(28, 27, 27, 1);
 }
-
 .menu__logo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-
 .menu__button {
   background-color: rgb(255, 255, 255);
   cursor: pointer;
 }
-
 .button__wrap {
   &:nth-child(2) {
     margin-left: 10px;
     margin-right: 1px;
   }
-
   &:last-child {
     margin-right: 7px;
   }
 }
-
 /* main style */
 .main,
 .main__colorSection,
@@ -111,29 +93,24 @@ ul {
   align-items: center;
   position: relative;
 }
-
 .main {
   width: 1440px;
   background-color: rgb(255, 255, 255);
   align-items: center;
 }
-
 .main__colorSection {
   width: 1440px;
 }
-
 .main__colorSection:first-child {
   height: 554px;
   background-color: rgba(240, 239, 235, 1);
 }
-
 .main__colorSection:last-child {
   height: 480px;
   background-color: rgba(240, 240, 240, 1);
   margin-top: 426px;
   justify-content: flex-end;
 }
-
 .main__feature {
   width: 1280px;
   height: 709px;
@@ -141,12 +118,10 @@ ul {
   margin-top: 190px;
   margin-bottom: 52px;
 }
-
-.feature__title{
+.feature__title {
   font: 400 30px/30px 'Roboto', sans-serif;
   text-align: center;
 }
-
 .feature__line {
   width: 1280px;
   height: 157px;
@@ -158,20 +133,16 @@ ul {
   margin-bottom: 110px;
   padding: 0 108px;
 }
-
 .feature__point {
   width: 338px;
   font: 700 30px/30px 'Roboto', sans-serif;
 }
-
 .feature__point:nth-child(2) {
   margin: 0 24px;
 }
-
 .feature__point-first {
   white-space: nowrap;
 }
-
 .feature__point-first::before {
   content: '';
   display: block;
@@ -183,31 +154,24 @@ ul {
   left: 50%;
   transform: translateX(-50%);
 }
-
 .feature__point-first.uniq1::before {
   background-color: rgba(33, 247, 236, 1);
 }
-
 .feature__point-first.uniq2::before {
   background-color: rgba(51, 211, 188, 1);
 }
-
 .feature__point-first.uniq3::before {
   background-color: rgba(24, 165, 198, 1);
 }
-
 .feature__point-first.uniq4::before {
   background-color: rgba(211, 143, 98, 1);
 }
-
 .feature__point-first.uniq5::before {
   background-color: rgba(249, 76, 67, 1);
 }
-
 .feature__point-first.uniq6::before {
   background-color: rgba(211, 153, 255, 1);
 }
-
 .main__quotes {
   font: 700 30px/100% 'Roboto', sans-serif;
   justify-content: flex-start;
@@ -215,66 +179,53 @@ ul {
   background-color: transparent;
   margin: 50px;
 }
-
-.quotes__title{
+.quotes__title {
   font: 700 30px/100% 'Roboto', sans-serif;
   text-align: center;
 }
-
 .quotes__line {
   width: 1280px;
   display: flex;
   margin-top: 102px;
 }
-
 .quotes__item {
   justify-content: center;
   text-align: center;
   margin: 0 100px;
-
   &:first-child {
     margin-left: 108px;
     margin-right: 0;
   }
-
   &:last-child {
     margin-right: 108px;
     margin-left: 0;
   }
 }
-
 .quotes__item_img {
   width: 288px;
   height: 351px;
   margin-bottom: 35px;
 }
-
 .quotes__item_quo {
   font: 700 22px/100% 'Roboto', sans-serif;
   margin-bottom: 40px;
 }
-
 .quotes__item_auth {
   display: block;
   margin-top: 40px;
   margin-bottom: 44px;
 }
-
 .quotes__item_auth {
   font: 400 19px/100% 'Roboto', sans-serif;
 }
-
 .quotes__item_auth {
   font-size: 20px;
 }
-
 .quotes__item_link {
   font: 700 18px/100% 'Roboto', sans-serif;
   color: rgb(0, 0, 0);
 }
-
 /* footer style */
-
 .footer {
   width: 1440px;
   height: 291px;
