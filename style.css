@@ -1,25 +1,25 @@
 /*reset*/
-* {
+*{
   margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
 }
-ul {
+ul{
   list-style: none;
 }
 /*form style*/
-:root {
+:root{
   --textarea-height: 140px;
 }
-form span {
+form span{
   color: #ff0000;
 }
-body {
+body{
   width: 100%;
   background: #a1a1a1;
 }
-.job-application {
+.job-form{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -32,7 +32,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
-.job-application__contacts, .job-application__personal, .job-application__favorite {
+.job-form__section{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -41,39 +41,39 @@ body {
   gap: 10px;
   padding: 14px 0 10px 10px;
 }
-.job-application__label {
+.job-form__label{
   display: flex;
   position: relative;
   width: 100px;
 }
-.job-application__label:has(.job-application__area) {
+.job-form__label:has(.job-form__area){
   height: var(--textarea-height);
 }
-.job-application__field, .job-application__area {
+.job-form__field, .job-form__area{
   width: 250px;
   position: absolute;
   transform: translate(100px);
 }
-.job-application__area {
+.job-form__area{
   height: var(--textarea-height);
   resize: none;
 }
-.favorite__list {
+.favorite__list{
   display: flex;
   flex-wrap: wrap;
 }
-.list__item {
+.list__item{
   display: block;
   width: 120px;
 }
-.favorite__label {
+.favorite__label{
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   gap: 10px;
   cursor: pointer;
 }
-.job-application__button {
+.job-form__button{
   padding: 10px;
   border-radius: 0;
 }

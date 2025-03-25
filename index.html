@@ -6,88 +6,88 @@
   <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form class="job-application" action="#" method="get">
+<form class="job-form" action="#" method="get">
   <h3>Форма заявки на работу в зоопарке</h3>
   <em>Пожалуйста, заполните форму. Обязательные поля помечены <span>*</span></em>
 
-  <fieldset class="job-application__contacts">
-    <legend class="job-application__border">Контактная информация</legend>
-    <label class="job-application__label"> Имя<span>*</span>
-      <input class="job-application__field" type="text" name="name" placeholder="Имя" required>
+  <fieldset class="job-form__section">
+    <legend class="job-form__border">Контактная информация</legend>
+    <label class="job-form__label"> Имя<span>*</span>
+      <input class="job-form__field" type="text" name="name" placeholder="Имя" required>
     </label>
-    <label class="job-application__label"> Телефон
-      <input class="job-application__field" type="tel" name="tel" placeholder="Телефон">
+    <label class="job-form__label"> Телефон
+      <input class="job-form__field" type="tel" name="tel" placeholder="Телефон">
     </label>
-    <label class="job-application__label"> Email<span>*</span>
-      <input class="job-application__field" type="email" name="email" placeholder="Email" required>
+    <label class="job-form__label"> Email<span>*</span>
+      <input class="job-form__field" type="email" name="email" placeholder="Email" required>
     </label>
   </fieldset>
 
-  <fieldset class="job-application__personal">
-    <legend class="job-application__border">Персональная информация</legend>
-    <label class="job-application__label"> Возраст<span>*</span>
-      <input class="job-application__field" type="text" name="age" placeholder="Возраст" required>
+  <fieldset class="job-form__section">
+    <legend class="job-form__border">Персональная информация</legend>
+    <label class="job-form__label"> Возраст<span>*</span>
+      <input class="job-form__field" type="text" name="age" placeholder="Возраст" required>
     </label>
-    <label class="job-application__label"> Пол
-      <select class="job-application__field" name="gender">
+    <label class="job-form__label"> Пол
+      <select class="job-form__field" name="gender">
         <option value="мужчина">Мужчина</option>
         <option value="женщина">Женщина</option>
         <option value="" selected></option>
       </select>
     </label>
-    <label class="job-application__label"> Перечислите личные качества:
-      <textarea class="job-application__area" name="about" placeholder="Несколько слов о себе..." rows="9" cols="33"
+    <label class="job-form__label"> Перечислите личные качества:
+      <textarea class="job-form__area" name="about" placeholder="Несколько слов о себе..." rows="9" cols="33"
                 maxlength="300"></textarea>
     </label>
   </fieldset>
 
-  <fieldset class="job-application__favorite">
+  <fieldset class="job-form__section">
     <legend>Выберите ваших любимых животных</legend>
     <ul class="favorite__list">
       <li class="list__item">
         <label class="favorite__label">Зебра
-          <input class="job-application__checkbox" type="checkbox" name="favorite1" value="Зебра">
+          <input class="job-form__checkbox" type="checkbox" name="favorite1" value="Зебра">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Кошак
-          <input class="job-application__checkbox" type="checkbox" name="favorite2" value="Кошак">
+          <input class="job-form__checkbox" type="checkbox" name="favorite2" value="Кошак">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Анаконда
-          <input class="job-application__checkbox" type="checkbox" name="favorite3" value="Анаконда">
+          <input class="job-form__checkbox" type="checkbox" name="favorite3" value="Анаконда">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Человек
-          <input class="job-application__checkbox" type="checkbox" name="favorite4" value="Человек">
+          <input class="job-form__checkbox" type="checkbox" name="favorite4" value="Человек">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Слон
-          <input class="job-application__checkbox" type="checkbox" name="favorite5" value="Слон">
+          <input class="job-form__checkbox" type="checkbox" name="favorite5" value="Слон">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Антилопа
-          <input class="job-application__checkbox" type="checkbox" name="favorite6" value="Антилопа">
+          <input class="job-form__checkbox" type="checkbox" name="favorite6" value="Антилопа">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Голубь
-          <input class="job-application__checkbox" type="checkbox" name="favorite7" value="Голубь">
+          <input class="job-form__checkbox" type="checkbox" name="favorite7" value="Голубь">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Краб
-          <input class="job-application__checkbox" type="checkbox" name="favorite8" value="Краб">
+          <input class="job-form__checkbox" type="checkbox" name="favorite8" value="Краб">
         </label>
       </li>
     </ul>
   </fieldset>
 
-  <button class="job-application__button" type="submit">Отправить информацию</button>
+  <button class="job-form__button" type="submit">Отправить информацию</button>
 </form>
 
 </body>
