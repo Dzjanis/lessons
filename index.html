@@ -6,26 +6,44 @@
   <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form class="job-application">
+<form class="job-application" action="#" method="get">
   <h3>Форма заявки на работу в зоопарке</h3>
-  <i>Пожалуйста заполните форму. Обязательные поля помечены <span>*</span></i>
+  <em>Пожалуйста заполните форму. Обязательные поля помечены <span>*</span></em>
 
   <fieldset class="job-application__contacts">
     <legend class="job-application__border">Контактная информация</legend>
-    <input type="text" name="candidat-name" placeholder="Имя">
-    <input type="text" name="candidat-surname" placeholder="Фамилия">
-    <input type="email" name="candidat-email" placeholder="e-Mail">
+    <label class="job-application__label"> Имя<span>*</span>
+      <input type="text" name="name" placeholder="Имя"  required class="job-application__field">
+    </label>
+    <label class="job-application__label"> Телефон
+      <input type="tel" name="tel" placeholder="Телефон" class="job-application__field">
+    </label>
+    <label class="job-application__label"> Email<span>*</span>
+      <input type="email" name="email" placeholder="Email" required class="job-application__field">
+    </label>
   </fieldset>
 
   <fieldset class="job-application__personal">
-    <legend class="job-application__border">
-      <input type="number" name="candidat-age" placeholder="Возраст">
-    </legend>
+    <legend class="job-application__border">Персональная информация</legend>
+    <label class="job-application__label"> Возраст<span>*</span>
+      <input type="text" name="age" placeholder="Возраст" required class="job-application__field">
+    </label>
+    <label class="job-application__label"> Пол
+      <select class="job-application__field">
+        <option value="мужчина">Мужчина</option>
+        <option value="женщина">Женщина</option>
+      </select>
+    </label>
+    <label class="job-application__label"> Перечислите личные качества
+      <textarea name="about" placeholder="Несколько слов о себе..." class="job-application__area"></textarea>
+    </label>
   </fieldset>
-  <fieldset class="job-application__animals">
-    <legend class="job-application__border">
 
-    </legend>
+  <fieldset class="job-application__favorite">
+    <legend>Выберите ваших любимых животных</legend>>
+    <label class="job-application__label">Выберите ваших любимых животных
+      <input>
+    </label>
   </fieldset>
 
   <button class="job-application__submit" type="submit">Отправить информацию</button>

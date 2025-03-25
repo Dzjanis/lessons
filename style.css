@@ -1,10 +1,12 @@
 * {
    margin: 0;
    padding: 0;
-   border: none;
    outline: 0;
    box-sizing: border-box;
  }
+:root{
+  --textarea-height: 150px;
+}
 span{
   color: #ff0000;
 }
@@ -12,19 +14,45 @@ body{
   width: 100%;
   background: #a1a1a1;
 }
+
 .job-application{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
   width: 640px;
-  height: 640px;
+  gap: 10px;
+  padding-left: 10px;
   background-color: #fff;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.job-application__border{
-  border: 1px solid #000000;
-  
+.job-application__label{
+  display: flex;
+  position: relative;
+  width: 100px;
 }
+.job-application__field, .job-application__area{
+  width: 250px;
+  position: absolute;
+  transform: translate(100px) ;
+}
+.job-application__area{
+  height: var(--textarea-height);
+  resize: none;
+}
+.job-application__label:has(.job-application__area){
+  height: var(--textarea-height);
+}
+
 .job-application__contacts, .job-application__personal{
   display: flex;
   flex-direction: column;
   align-items:flex-start;
-  gap: 10px 10px;
+  width: 95%;
+  border: 1px solid black;
+  gap: 10px;
+  padding: 10px 0 10px 10px;
 }
 
