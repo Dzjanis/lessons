@@ -13,30 +13,31 @@
   <fieldset class="job-application__contacts">
     <legend class="job-application__border">Контактная информация</legend>
     <label class="job-application__label"> Имя<span>*</span>
-      <input type="text" name="name" placeholder="Имя" required class="job-application__field">
+      <input class="job-application__field" type="text" name="name" placeholder="Имя" required>
     </label>
     <label class="job-application__label"> Телефон
-      <input type="tel" name="tel" placeholder="Телефон" class="job-application__field">
+      <input class="job-application__field" type="tel" name="tel" placeholder="Телефон">
     </label>
     <label class="job-application__label"> Email<span>*</span>
-      <input type="email" name="email" placeholder="Email" required class="job-application__field">
+      <input class="job-application__field" type="email" name="email" placeholder="Email" required>
     </label>
   </fieldset>
 
   <fieldset class="job-application__personal">
     <legend class="job-application__border">Персональная информация</legend>
     <label class="job-application__label"> Возраст<span>*</span>
-      <input type="text" name="age" placeholder="Возраст" required class="job-application__field">
+      <input class="job-application__field" type="text" name="age" placeholder="Возраст" required>
     </label>
     <label class="job-application__label"> Пол
-      <select class="job-application__field">
+      <select class="job-application__field" name="gender">
         <option value="мужчина">Мужчина</option>
         <option value="женщина">Женщина</option>
+        <option value="" selected></option>
       </select>
     </label>
     <label class="job-application__label"> Перечислите личные качества:
-      <textarea name="about" placeholder="Несколько слов о себе..."
-                class="job-application__area"></textarea>
+      <textarea class="job-application__area" name="about" placeholder="Несколько слов о себе..." rows="9" cols="33"
+                maxlength="300"></textarea>
     </label>
   </fieldset>
 
@@ -45,42 +46,42 @@
     <ul class="favorite__list">
       <li class="list__item">
         <label class="favorite__label">Зебра
-          <input type="checkbox" name="favorite1" value="Зебра" class="job-application__checkbox">
+          <input class="job-application__checkbox" type="checkbox" name="favorite1" value="Зебра">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Кошак
-          <input type="checkbox" name="favorite2" value="Кошак" class="job-application__checkbox">
+          <input class="job-application__checkbox" type="checkbox" name="favorite2" value="Кошак">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Анаконда
-          <input type="checkbox" name="favorite3" value="Анаконда" class="job-application__checkbox">
+          <input class="job-application__checkbox" type="checkbox" name="favorite3" value="Анаконда">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Человек
-          <input type="checkbox" name="favorite4" value="Человек" class="job-application__checkbox">
+          <input class="job-application__checkbox" type="checkbox" name="favorite4" value="Человек">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Слон
-          <input type="checkbox" name="favorite5" value="Слон" class="job-application__checkbox">
+          <input class="job-application__checkbox" type="checkbox" name="favorite5" value="Слон">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Антилопа
-          <input type="checkbox" name="favorite6" value="Антилопа" class="job-application__checkbox">
+          <input class="job-application__checkbox" type="checkbox" name="favorite6" value="Антилопа">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Голубь
-          <input type="checkbox" name="favorite7" value="Голубь" class="job-application__checkbox">
+          <input class="job-application__checkbox" type="checkbox" name="favorite7" value="Голубь">
         </label>
       </li>
       <li class="list__item">
         <label class="favorite__label">Краб
-          <input type="checkbox" name="favorite8" value="Краб" class="job-application__checkbox">
+          <input class="job-application__checkbox" type="checkbox" name="favorite8" value="Краб">
         </label>
       </li>
     </ul>

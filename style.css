@@ -5,14 +5,14 @@
   outline: 0;
   box-sizing: border-box;
 }
-ul{
+ul {
   list-style: none;
 }
 /*form style*/
 :root {
-  --textarea-height: 150px;
+  --textarea-height: 140px;
 }
-span {
+form span {
   color: #ff0000;
 }
 body {
@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 640px;
   gap: 10px;
   padding: 10px 0 10px 10px;
@@ -41,7 +41,7 @@ body {
   gap: 10px;
   padding: 14px 0 10px 10px;
 }
-.job-application__label{
+.job-application__label {
   display: flex;
   position: relative;
   width: 100px;
@@ -58,22 +58,22 @@ body {
   height: var(--textarea-height);
   resize: none;
 }
-.favorite__list{
+.favorite__list {
   display: flex;
   flex-wrap: wrap;
 }
-.list__item{
+.list__item {
   display: block;
   width: 120px;
 }
-.favorite__label{
+.favorite__label {
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   gap: 10px;
   cursor: pointer;
 }
-.job-application__button{
+.job-application__button {
   padding: 10px;
   border-radius: 0;
 }
