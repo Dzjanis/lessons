@@ -1,58 +1,80 @@
+/*reset*/
 * {
-   margin: 0;
-   padding: 0;
-   outline: 0;
-   box-sizing: border-box;
- }
-:root{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+ul{
+  list-style: none;
+}
+/*form style*/
+:root {
   --textarea-height: 150px;
 }
-span{
+span {
   color: #ff0000;
 }
-body{
+body {
   width: 100%;
   background: #a1a1a1;
 }
-
-.job-application{
+.job-application {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
   width: 640px;
   gap: 10px;
-  padding-left: 10px;
+  padding: 10px 0 10px 10px;
   background-color: #fff;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+.job-application__contacts, .job-application__personal, .job-application__favorite {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 95%;
+  border: 1px solid black;
+  gap: 10px;
+  padding: 14px 0 10px 10px;
 }
 .job-application__label{
   display: flex;
   position: relative;
   width: 100px;
 }
-.job-application__field, .job-application__area{
+.job-application__label:has(.job-application__area) {
+  height: var(--textarea-height);
+}
+.job-application__field, .job-application__area {
   width: 250px;
   position: absolute;
-  transform: translate(100px) ;
+  transform: translate(100px);
 }
-.job-application__area{
+.job-application__area {
   height: var(--textarea-height);
   resize: none;
 }
-.job-application__label:has(.job-application__area){
-  height: var(--textarea-height);
+.favorite__list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.list__item{
+  display: block;
+  width: 120px;
+}
+.favorite__label{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 10px
+}
+.job-application__button{
+  padding: 10px;
+  border-radius: 0;
 }
 
-.job-application__contacts, .job-application__personal{
-  display: flex;
-  flex-direction: column;
-  align-items:flex-start;
-  width: 95%;
-  border: 1px solid black;
-  gap: 10px;
-  padding: 10px 0 10px 10px;
-}
 
