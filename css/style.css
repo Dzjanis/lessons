@@ -43,7 +43,7 @@
 :root {
   --font-family: 'Nunito Sans', sans-serif;
   --font-color: #ffffff;
-  --width-main: 100dvw;
+  --width-main: 100vw;
   --width-add: 1180px;
   --width-logo: 137px;
 }
@@ -78,13 +78,14 @@ button{
   align-items: center;
   width: var(--width-main);
   height: calc(var(--width-main) * 0.52);
-  background: url('../image/main.jpg') no-repeat center top / contain #a1a1a1a1;
+  background: url('../image/main.jpg') no-repeat center top / cover #a1a1a1a1;
   position: relative;
   left: 50%;
   transform: translatex(-50%);
 }
 .header__nav {
   width: var(--width-add);
+  max-width: 1920px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -98,14 +99,22 @@ button{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 26px; /* em? */
   font: 600 18px/1 var(--font-family);
+  gap: 1.44em; /* em? */
   color: var(--font-color);
 }
 .list__item-button{
-  margin-left: 23px; /* em? */
+  font: inherit;
+  margin-left: 1.28em; /* em? */
   background-color: #1A3E3E;
-  padding: 12px 24px; /* em? */
+  padding: 0.67em 1.33em; /* em? */
+  border-radius: 0.22em;
+}
+.header__title{
+  width: var(--width-add);
+  padding-right: calc(var(--width-add) * 0.1);
+  font: 700 50px/1.5 'Next Art', serif;
+  color: var(--font-color);
 }
 /*adaptive*/
 @media (max-width: 1200px) {
@@ -113,22 +122,28 @@ button{
     --width-add: 95dvw;
     --width-logo: 84px;
   }
+  .nav__list{
+    font: 400 14px/1 var(--font-family);
+  }
 }
 @media (max-width: 800px) {
   :root {
     --width-add: 95dvw;
   }
   .nav__list{
-    font: 400 14px/1 var(--font-family);
+    font: 400 12px/1 var(--font-family);
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   :root{
     --width-logo: 84px;
   }
   .header {
     height: 171.43dvw;
     background: url('../image/main-m.jpg') no-repeat center top / contain #a1a1a1a1;
+  }
+  .header__title{
+    font-size: 28px;
   }
   .nav__list {
     visibility: hidden;
