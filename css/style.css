@@ -40,6 +40,13 @@
   font-weight: 700;
   src: url('../fonts/nextart-bold.woff2') format('woff2');
 }
+:root {
+  --font-family: 'Nunito Sans', sans-serif;
+  --font-color: #ffffff;
+  --width-main: 100dvw;
+  --width-add: 1180px;
+  --width-logo: 137px;
+}
 /*reset*/
 * {
   margin: 0;
@@ -58,12 +65,10 @@ ul {
 body {
   position: relative;
 }
-:root {
-  --font-family: 'Nunito Sans', sans-serif;
-  --font-color: #ffffff;
-  --width-main: 100dvw;
-  --width-add: 1180px;
-  --width-logo: 137px;
+button{
+  cursor: pointer;
+  outline: none;
+  color: inherit;
 }
 /*header*/
 .header {
@@ -87,27 +92,45 @@ body {
 .nav__logo {
   width: var(--width-logo);
   height: calc(var(--width-logo) * 0.525);
-  position: absolute;
+  position: relative;
 }
 .nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px; /* em? */
   font: 600 18px/1 var(--font-family);
   color: var(--font-color);
+}
+.list__item-button{
+  margin-left: 23px; /* em? */
+  background-color: #1A3E3E;
+  padding: 12px 24px; /* em? */
 }
 /*adaptive*/
 @media (max-width: 1200px) {
   :root {
     --width-add: 95dvw;
-    --width-logo: 85.5px;
+    --width-logo: 84px;
   }
 }
 @media (max-width: 800px) {
   :root {
     --width-add: 95dvw;
   }
+  .nav__list{
+    font: 400 14px/1 var(--font-family);
+  }
 }
 @media (max-width: 500px) {
+  :root{
+    --width-logo: 84px;
+  }
   .header {
     height: 171.43dvw;
     background: url('../image/main-m.jpg') no-repeat center top / contain #a1a1a1a1;
+  }
+  .nav__list {
+    visibility: hidden;
   }
 }
