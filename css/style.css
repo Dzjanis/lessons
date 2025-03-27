@@ -97,7 +97,7 @@ body {
 @media (max-width: 1200px) {
   :root {
     --width-add: 95dvw;
-    --width-logo: 85.5px;
+    --width-logo: 85px;
   }
 }
 @media (max-width: 800px) {
