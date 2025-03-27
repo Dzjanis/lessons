@@ -54,6 +54,7 @@
   border: none;
   outline: 0;
   box-sizing: border-box;
+  color: var(--font-color);
 }
 a {
   text-decoration: none;
@@ -125,7 +126,7 @@ button {
   font: 700 50px/1.5 'Next Art', serif;
   color: var(--font-color);
 }
-.form__fields{
+.form__field{
   font: 700 16px/1.25 var(--font-family);
   display: flex;
   align-items: center;
@@ -134,10 +135,10 @@ button {
   width: var(--width-add);
   height: calc(var(--width-add) * 0.136);
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #ffffff33;
   
 }
-.form__location, .form__date, .form__participiants{
+.form__location, .form__date, .form__participants{
   font: inherit;
   border-radius: 0.25em;
   width: calc(var(--width-add) * 0.23);
