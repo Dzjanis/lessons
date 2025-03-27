@@ -65,7 +65,7 @@ ul {
 body {
   position: relative;
 }
-button{
+button {
   cursor: pointer;
   outline: none;
   color: inherit;
@@ -74,10 +74,11 @@ button{
 .header {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: var(--width-main);
-  height: calc(var(--width-main) * 0.52);
+  height: calc(var(--width-main) * 0.51);
+  padding-bottom: calc(var(--width-main) * 0.043);
   background: url('../image/main.jpg') no-repeat center top / cover #a1a1a1a1;
   position: relative;
   left: 50%;
@@ -103,49 +104,93 @@ button{
   gap: 1.44em; /* em? */
   color: var(--font-color);
 }
-.list__item-button{
+.list__item-button {
   font: inherit;
   margin-left: 1.28em; /* em? */
   background-color: #1A3E3E;
   padding: 0.67em 1.33em; /* em? */
   border-radius: 0.22em;
 }
-.header__title{
+.header__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 1180px; /* пересчитать на адаптив */
+  height: ;
+}
+.form__title {
   width: var(--width-add);
   padding-right: calc(var(--width-add) * 0.1);
   font: 700 50px/1.5 'Next Art', serif;
   color: var(--font-color);
 }
-/*adaptive*/
+.form__fields{
+  font: 700 16px/1.25 var(--font-family);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1.125em;
+  width: var(--width-add);
+  height: calc(var(--width-add) * 0.136);
+  border-radius: 10px;
+  background-color: #ffffff;
+  
+}
+.form__location, .form__date, .form__participiants{
+  font: inherit;
+  border-radius: 0.25em;
+  width: calc(var(--width-add) * 0.23);
+  background-color: transparent;
+}
+.form__button{
+  font: inherit;
+  color: #1A3E3E;
+  display: inline;
+  padding: 1em 2.25em;
+  border-radius: 0.25em;
+  
+}
+
+/* adaptive */
+@media (min-width: 1930px) {
+  :root {
+    --width-main: 1920px;
+  }
+}
+/* for TV */
 @media (max-width: 1200px) {
   :root {
     --width-add: 95dvw;
     --width-logo: 84px;
   }
-  .nav__list{
+  .nav__list {
     font: 400 14px/1 var(--font-family);
   }
 }
+/* for screen 4:3 */
 @media (max-width: 800px) {
   :root {
-    --width-add: 95dvw;
   }
-  .nav__list{
+  .nav__list {
     font: 400 12px/1 var(--font-family);
   }
 }
+/* for tablet */
 @media (max-width: 600px) {
-  :root{
+  :root {
     --width-logo: 84px;
   }
   .header {
-    height: 171.43dvw;
+    height: calc(var(--width-main) * 1.54);
     background: url('../image/main-m.jpg') no-repeat center top / contain #a1a1a1a1;
+    overflow: hidden;
   }
-  .header__title{
+  .header__title {
     font-size: 28px;
   }
   .nav__list {
     visibility: hidden;
   }
 }
+/* for mobile */
