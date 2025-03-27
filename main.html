@@ -4,7 +4,7 @@
   <meta charset="UTF-8"
         content="width=device-width, user-scable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>КП-1</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 <header class="header">
@@ -55,7 +55,7 @@
       </li>
     </ul>
   </nav>
-  <form class="header__form">
+  <form class="header__form" name="booking-reqest" action="/submit" method="get">
     <h2 class="form__title">Насладись прогулкой в горах с командой единомышленников</h2>
     <div class="form__fields">
 
@@ -69,14 +69,14 @@
             <option class="form__location-item" value="город">город</option>
           </select>
         </label>
-        <span class="form_dsc">выбирете из списка</span>
+        <span class="form__dsc">выбирете из списка</span>
       </div>
 
       <div class="form__fields-wrap">
         <label class="form__label">
           <input class="form__date" type="date" name="date">
         </label>
-        <span class="form_dsc">укажите диапазон</span>
+        <span class="form__dsc">укажите диапазон</span>
       </div>
 
       <div class="form__fields-wrap">
@@ -89,7 +89,7 @@
             <option class="form__participants-item" value="7">7 человек</option>
           </select>
         </label>
-        <span class="form_dsc">минимум 4 человека</span>
+        <span class="form__dsc">минимум 4 человека</span>
       </div>
 
       <button class="form__button" type="submit">Найти программу</button>
