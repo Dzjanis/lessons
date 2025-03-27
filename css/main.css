@@ -1,46 +1,46 @@
-@font-face {
+@font-face{
   font-display: swap;
   font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 300;
   src: url('../fonts/nunito-sans-v15-cyrillic_latin-300.woff2') format('woff2');
 }
-@font-face {
+@font-face{
   font-display: swap;
   font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/nunito-sans-v15-cyrillic_latin-regular.woff2') format('woff2');
 }
-@font-face {
+@font-face{
   font-display: swap;
   font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 600;
   src: url('../fonts/nunito-sans-v15-cyrillic_latin-600.woff2') format('woff2');
 }
-@font-face {
+@font-face{
   font-display: swap;
   font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 700;
   src: url('../fonts/nunito-sans-v15-cyrillic_latin-700.woff2') format('woff2');
 }
-@font-face {
+@font-face{
   font-display: swap;
   font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 800;
   src: url('../fonts/nunito-sans-v15-cyrillic_latin-800.woff2') format('woff2');
 }
-@font-face {
+@font-face{
   font-display: swap;
   font-family: 'Next Art';
   font-style: normal;
   font-weight: 700;
   src: url('../fonts/nextart-bold.woff2') format('woff2');
 }
-:root {
+:root{
   --font-family: 'Nunito Sans', sans-serif;
   --font-color: #ffffff;
   --width-main: 100vw;
@@ -48,7 +48,7 @@
   --width-logo: 137px;
 }
 /*reset*/
-* {
+*{
   margin: 0;
   padding: 0;
   border: none;
@@ -56,23 +56,23 @@
   box-sizing: border-box;
   color: var(--font-color);
 }
-a {
+a{
   text-decoration: none;
   color: inherit;
 }
-ul {
+ul{
   list-style: none;
 }
-body {
+body{
   position: relative;
 }
-button {
+button{
   cursor: pointer;
   outline: none;
   color: inherit;
 }
 /*header*/
-.header {
+.header{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -85,19 +85,19 @@ button {
   left: 50%;
   transform: translatex(-50%);
 }
-.header__nav {
+.header__nav{
   width: var(--width-add);
   max-width: 1920px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.nav__logo {
+.nav__logo{
   width: var(--width-logo);
   height: calc(var(--width-logo) * 0.525);
   position: relative;
 }
-.nav__list {
+.nav__list{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -105,28 +105,28 @@ button {
   gap: 1.44em; /* em? */
   color: var(--font-color);
 }
-.list__item-button {
+.list__item-button{
   font: inherit;
   margin-left: 1.28em; /* em? */
   background-color: #1A3E3E;
   padding: 0.67em 1.33em; /* em? */
   border-radius: 0.22em;
 }
-.header__form {
+.header__form{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
   align-items: center;
-  width: var(--width-add); /* пересчитать на адаптив */
-  /*height: 352px;*/
+  width: var(--width-add);
 }
-.form__title {
+.form__title{
   width: var(--width-add);
   padding-right: calc(var(--width-add) * 0.1);
   font: 700 50px/1.5 'Next Art', serif;
   color: var(--font-color);
 }
-.form__fields {
+.form__fields{
   font: 700 16px/1.25 var(--font-family);
   width: var(--width-add);
   height: calc(var(--width-add) * 0.136);
@@ -149,7 +149,7 @@ button {
   display: block;
   padding: 0.57em 0.57em 0;
 }
-.form__location, .form__date, .form__participants {
+.form__location, .form__date, .form__participants{
   font: inherit;
   color: #fdfdfd;
   border: 1px solid #E1E3E4;
@@ -162,48 +162,50 @@ button {
   background-color: #E1E3E400;
   color: #1A3E3E;
 }
-.form__button {
+.form__button, .header__button-mobile{
   display: flex;
   justify-content: center;
   align-items: center;
   font: inherit;
   color: #1A3E3E;
-  padding: 1em ;
+  padding: 1em;
   border-radius: 0.25em;
 }
-.form__date::-webkit-calendar-picker-indicator{
-  color: #050505;
- }
- /*adaptive*/
-@media (min-width: 1930px) {
-  :root {
+.header__button-mobile{
+  font: 700 16px/1 var(--font-family);
+  position: relative;
+  align-self: flex-start;
+  margin: 32px 0 50px 0;
+  display: none;
+}
+/*adaptive*/
+@media (min-width: 1930px){  /* for TV */
+  :root{
     --width-main: 1920px;
   }
 }
-/* for TV */
-@media (max-width: 1200px) {
-  :root {
+@media (max-width: 1200px){  /* for screen 4:3 */
+  :root{
     --width-add: 95dvw;
     --width-logo: 84px;
   }
-  .nav__list {
+  .nav__list{
     font: 400 14px/1 var(--font-family);
   }
   .form__title{
     font: 700 32px/1.5 'Next Art', serif;
   }
 }
-/* for screen 4:3 */
-@media (max-width: 800px) {
-  :root {
+@media (max-width: 800px){
+  :root{
   }
-  .nav__list {
+  .nav__list{
     font: 400 12px/1 var(--font-family);
   }
   .form__title{
     font: 700 28px/1.5 'Next Art', serif;
   }
-  .form__location, .form__date, .form__participants {
+  .form__location, .form__date, .form__participants{
     width: calc(var(--width-add) * 0.2);
   }
   .form__button, .form__location, .form__date, .form__participants, .form__dsc{
@@ -211,24 +213,26 @@ button {
   }
 }
 /* for tablet */
-@media (max-width: 600px) {
-  :root {
+@media (max-width: 600px){
+  :root{
     --width-logo: 84px;
   }
-  .header {
+  .header{
     height: calc(var(--width-main) * 1.54);
     background: url('../image/main-m.jpg') no-repeat center top / contain #a1a1a1a1;
     overflow: hidden;
   }
-  .header__title {
+  .header__title{
     font-size: 28px;
   }
-  .nav__list {
+  .nav__list{
     visibility: hidden;
   }
   .form__fields{
-    flex-direction: column-reverse;
-
+    display: none;
+  }
+  .header__button-mobile{
+    display: flex;
   }
 }
 /* for mobile */
