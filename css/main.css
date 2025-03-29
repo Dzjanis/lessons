@@ -216,13 +216,20 @@ button{
   font: 600 14px/1 var(--font-family);
   color: var(--font-color);
 }
+.footer__columns{
+  width: var(--width-add);
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: space-between;
+  align-items: flex-start;
+}
 /*adaptive*/
-@media (min-width: 1930px){  /* for TV */
+@media (min-width: 1930px)/* for TV */{
   :root{
     --width-main: 1920px;
   }
 }
-@media (max-width: 1200px){  /* for screen 4:3 */
+@media (max-width: 1200px)/* for screen 4:3 */{
   :root{
     --width-add: 95dvw;
     --width-logo: 84px;
@@ -234,7 +241,7 @@ button{
     font: 700 32px/1.5 'Next Art', serif;
   }
 }
-@media (max-width: 800px){
+@media (max-width: 800px)/* for tablet */{
   :root{
   }
   .nav__list{
@@ -250,8 +257,7 @@ button{
     font: 400 12px/1 var(--font-family);
   }
 }
-/* for tablet */
-@media (max-width: 600px){
+@media (max-width: 600px)/* for mobile */{
   :root{
     --width-logo: 84px;
   }
@@ -290,4 +296,4 @@ button{
   }
 
 }
-/* for mobile */
+
