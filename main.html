@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,31 @@
   <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body>
-
+<nav class="nav" aria-label="breadcrumb">
+  <ul class="nav__breadcrumb">
+    <li class="nav__breadcrumb-item"><a class="nav__breadcrumbs-link" href="#">Каталог</a></li>
+    <li class="nav__breadcrumb-item"><a class="nav__breadcrumbs-link" href="#">Для Лица</a></li>
+    <li class="nav__breadcrumb-item" aria-current="page">Питание и Увлажнение</li>
+  </ul>
+</nav>
+<div class="description__container">
+  <article class="description">
+    <h2 class="description__title">Питание и увлажнение</h2>
+    <p class="description__text">Увлажняющие средства от ELEMIS известны во всем мире неспроста. Сочетание лучших
+      натуральных компонентов и научных инновационных технологий привело к созданию потрясающих средств для питания и
+      увлажнения от ЭЛЕМИС, которые подходят для всех типов кожи. Выберите свой любимый увлажняющий крем от Elemis.</p>
+  </article>
+  <form class="filters">
+    <label class="price__label">
+      <select class="label__items" name="price">
+        <option class="label__item" value="max-price-first" selected>по возрастанию цены</option>
+        <option class="label__item" value="low-price-first">по убыванию цены</option>
+      </select>
+    </label>
+    <button class="filters__toggle=" type="button" aria-expanded="false" aria-controls="filter-window">Фильтры</button>
+  </form>
+</div>
+<form class="filters"></form>
+<div class="filters" id="filter-window" hidden></div>
 </body>
 </html>
