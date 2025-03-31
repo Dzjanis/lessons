@@ -108,10 +108,31 @@ a {
 /*section*/
 .products{
   max-width: var(--width-column);
+  width:100%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.products__cards{
+  max-width: var(--width-column);
+  width:100%;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
   flex-wrap: wrap;
+}
+.products__cards-item{
+  width: var(--width-item);
+  flex: 1 1 calc(33.333%-75px);
+}
+.cards-item__image{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
 
