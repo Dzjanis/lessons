@@ -40,6 +40,7 @@ a {
   }
 }
 .nav__breadcrumb {
+  width: 100%;
   max-width: var(--width-column);
   display: flex;
   justify-content: flex-start;
@@ -62,6 +63,7 @@ a {
   }
 }
 .description__container {
+  width: 100%;
   max-width: var(--width-column);
   display: flex;
   justify-content: space-between;
@@ -71,7 +73,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
 }
-.description__text{
+.description__text {
   font: 300 16px/1 'Stem', sans-serif;
   letter-spacing: 0;
 }
@@ -106,33 +108,73 @@ a {
   }
 }
 /*section*/
-.products{
+.products {
   max-width: var(--width-column);
-  width:100%;
-  display: flex;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 75px;
 }
-.products__cards{
-  max-width: var(--width-column);
-  width:100%;
-  background-color: aqua;
+.products__card {
+  max-width: var(--width-item);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card__image-wrap {
+  max-width: var(--width-item);
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 75px;
-  flex-wrap: wrap;
+  background-color: darkgray;
+  overflow: hidden;
 }
-.products__cards-item{
-  width: var(--width-item);
-  flex: 1 1 calc(33.333%-75px);
-}
-.cards-item__image{
+.card__image{
   width: 100%;
   height: auto;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
 }
+.product__rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*media*/
+@media (max-width: 800px) {
+  :root {
+    --width-main: 768px;
+    --width-column: 708px;
+    --width-item: 220px;
+  }
+  .products {
+    gap: 24px;
+  }
+  .description__container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filters {
+    flex-direction: row-reverse;
+  }
+}
+@media (max-width: 375px) {
+  :root {
+    --width-main: 375px;
+    --width-column: 355px;
+    --width-item: 174px;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .description__container {
+  }
+}
+
 
 
