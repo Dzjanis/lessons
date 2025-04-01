@@ -136,7 +136,7 @@ a {
   text-align: center;
   position: relative;
   gap: 14px;
-  &.sale::after{
+  &.sale::after {
     content: '-20%';
     display: flex;
     justify-content: center;
@@ -177,93 +177,117 @@ a {
     fill: #0F213A;
   }
 }
-.card__image-wrap {
-  max-width: var(--width-item);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: darkgray;
-  overflow: hidden;
-}
 .card__image {
+  max-width: var(--width-item);
   width: 100%;
   height: auto;
   object-fit: cover;
 }
-.card__description {
-  width: 92%;
-  font: 500 16px/1.625 'Stem', sans-serif;
-  letter-spacing: 0;
-}
-.product__rating {
+.card__labels {
   display: flex;
-  justify-content: center;
   align-items: center;
-  &::after {
-    content: '(12)';
-  }
-}
-.rating__point {
-  color: #0F213A;
-  cursor: pointer;
-  &:hover ~ .rating__point {
-    color: #C5C6C6;
-  }
-}
-.cards-item__button {
-  width: 100%;
-  max-width: 248px;
-  padding: 16px;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  font: 500 14px/1 'Stem', sans-serif;
+  height: 2em;
+  gap: 8px;
+  font: 500 12px/1 'Stem', sans-serif;
+}
+.labels__new, .labels__bestseller{
+  padding: 0.5em;
   color: #0F213A;
-  background-color: transparent;
-  text-transform: uppercase;
-  border: 1px solid #000000;
-  cursor: pointer;
-  margin:0.7em 0 1.7em 0;
-  &.disabled {
-    border-color: #E6E5E4;
-    pointer-events: none;
+  background-color: #E9F0F1;
+  display: none;
+}
+.products__card {
+  &:nth-child(1) .labels__bestseller {
+    display: flex;
+  }
+  &:nth-child(3) .labels__new {
+    display: flex;
+  }
+  &:nth-child(3) .labels__bestseller {
+    display: flex;
+  }
+  &:nth-child(5) .labels__new {
+    display: flex;
   }
 }
-/*media*/
-@media (max-width: 800px) {
-  :root {
-    --width-main: 768px;
-    --width-column: 708px;
-    --width-item: 220px;
-  }
-  .products {
-    gap: 24px;
-  }
-  .description__container {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .filters {
-    flex-direction: row-reverse;
-  }
   .card__description {
-    width: 100%;
-    font-size: 14px;
+    width: 92%;
+    font: 500 16px/1.625 'Stem', sans-serif;
+    letter-spacing: 0;
   }
-  .products__card.gift::after, .products__card.sale::after{
-    top: 12px;
-    left: 12px;
+  .product__rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+      content: '(12)';
+    }
   }
-  .card__button-favorite {
-    position: absolute;
-    top: 17px;
-    right: 15px;
+  .rating__point {
+    color: #0F213A;
+    cursor: pointer;
+    &:hover ~ .rating__point {
+      color: #C5C6C6;
+    }
   }
   .cards-item__button {
     width: 100%;
-    max-width: var(--width-item);
+    max-width: 248px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font: 500 14px/1 'Stem', sans-serif;
+    color: #0F213A;
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 1px solid #000000;
+    cursor: pointer;
+    margin: 0.7em 0 1.7em 0;
+    &.disabled {
+      border-color: #E6E5E4;
+      pointer-events: none;
+    }
+  }
+  /*media*/
+  @media (max-width: 800px) {
+    :root {
+      --width-main: 768px;
+      --width-column: 708px;
+      --width-item: 220px;
+    }
+    .products {
+      gap: 24px;
+    }
+    .description__container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .filters {
+      flex-direction: row-reverse;
+    }
+    .card__description {
+      width: 100%;
+      font-size: 14px;
+    }
+    .products__card.gift::after, .products__card.sale::after {
+      top: 12px;
+      left: 12px;
+    }
+    .card__labels {
+      font-size:8px;
+    }
+    .card__button-favorite {
+      position: absolute;
+      top: 17px;
+      right: 15px;
+    }
+    .cards-item__button {
+      width: 100%;
+      max-width: var(--width-item);
+      font: 500 14px/1 'Stem', sans-serif;
+    }
   }
   @media (max-width: 400px) {
     :root {
@@ -288,6 +312,7 @@ a {
     }
   }
 }
+
 
 
 
