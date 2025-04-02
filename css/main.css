@@ -202,9 +202,11 @@ button {
 /*footer*/
 .footer {
   width: var(--width-main);
-  height: calc(var(--width-add) * 0.497);
+  height: 587px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background-color: #1A3E3E;
   position: relative;
   left: 50%;
@@ -216,9 +218,7 @@ button {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 60px;
-  position: relative;
-  top: calc(var(--width-add) * 0.16);
-  left: 0;
+  padding-top: calc(var(--width-add) * 0.066);
 }
 .footer__column-item {
   width: calc(var(--width-add) * 0.27);
@@ -261,18 +261,15 @@ button {
 .column-item__list-item:hover::before {
   content: url('../image/mih.svg');
 }
-.footer__endline {
+.footer__copyright {
   width: var(--width-main);
   height: calc(var(--width-add) * 0.056);
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #18121E;
-  position: absolute;
-  left: 0;
-  bottom: 0;
 }
-.endline__item {
+.copyright__item {
   display: flex;
   width: calc(var(--width-add) / 2);
   justify-content: center;
@@ -283,7 +280,7 @@ button {
     justify-content: flex-end;
   }
 }
-.endline__item-address, .endline__item-link {
+.copyright__item-address, .copyright__item-link {
   font: 600 14px/1 var(--font-family);
   color: var(--font-color);
 }
@@ -412,7 +409,7 @@ button {
   .footer__column-item, .footer__column-item:first-child {
     width: var(--width-add);
   }
-  .footer__endline {
+  .footer__copyright {
     width: var(--width-main);
     height: 84px;
     display: flex;
@@ -420,7 +417,7 @@ button {
     flex-direction: column;
     gap: 8px;
   }
-  .endline__item, .endline__item:first-child, .endline__item:last-child {
+  .copyright__item, .copyright__item:first-child, .copyright__item:last-child {
     width: 296px;
     justify-content: center;
   }
