@@ -7,51 +7,51 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>lesson-10</title>
   <style>
-body{
-  width: 100%;
-}
-.grid__section{
-  font-size: 20px;
-  width: 600px;
-  height: 800px;
-  display: grid;
-  grid-template-areas:
+    body {
+      width: 100%;
+    }
+    .grid__section {
+      font-size: 20px;
+      width: 600px;
+      height: 800px;
+      display: grid;
+      grid-template-areas:
   "header header"
   "navigation right"
   "main right"
   "footer footer";
-  grid-template-rows: repeat(2, 1fr) 4fr 1fr  ;
-  gap: 10px 10px;
-}
-.header{
-  background-color: #facf36;
-  grid-area: header;
-}
-.navigation{
-  background-color: #ae79f8;
-  grid-area: navigation;
-}
-.right{
-  background-color: #77dcfa;
-  grid-area: right;
-}
-.main{
-  background-color: #ff9c7b;
-  grid-area: main;
-}
-.footer{
-  background-color: #8bffd6;
-  grid-area: footer;
-}
+      grid-template-rows: repeat(2, 1fr) 4fr 1fr;
+      gap: 10px 10px;
+    }
+    .header {
+      background-color: #facf36;
+      grid-area: header;
+    }
+    .navigation {
+      background-color: #ae79f8;
+      grid-area: navigation;
+    }
+    .right {
+      background-color: #77dcfa;
+      grid-area: right;
+    }
+    .main {
+      background-color: #ff9c7b;
+      grid-area: main;
+    }
+    .footer {
+      background-color: #8bffd6;
+      grid-area: footer;
+    }
   </style>
 </head>
 <body>
-  <section class="grid__section">
-    <div class="header">header</div>
-    <div class="navigation">navigation</div>
-    <div class="right">right</div>
-    <div class="main">main</div>
-    <div class="footer">footer</div>
-  </section>
+<section class="grid__section">
+  <div class="header">header</div>
+  <div class="navigation">navigation</div>
+  <div class="right">right</div>
+  <div class="main">main</div>
+  <div class="footer">footer</div>
+</section>
 </body>
 </html>
