@@ -80,7 +80,17 @@ button {
   margin-left: 1.28em;
   background-color: #1A3E3E;
   padding: 0.67em 1.33em;
+  border: 1px solid transparent;
   border-radius: 0.22em;
+  transition: transform 0.3s ease;
+  &:hover{
+    transform: scale(1.15);
+  }
+  &:active{
+    background-color: #fdfdfd;
+    border: 1px solid #1A3E3E;
+    color: #1A3E3E;
+  }
 }
 .section__title{
   font: 800 32px/1 var(--font-family);
@@ -188,8 +198,17 @@ button {
   align-items: center;
   font: inherit;
   color: #1A3E3E;
+  border: 1px solid transparent;
   padding: 1em;
   border-radius: 0.25em;
+  transition: transform 0.3s ease;
+  &:hover{
+    transform: scale(1.15);
+  }
+  &.form__submit:active{
+    background-color: #fdfdfd;
+    border: 1px solid #1A3E3E;
+  }
 }
 .nav__burger-mobile {
   background-color: transparent;
