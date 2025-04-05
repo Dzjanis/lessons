@@ -46,6 +46,8 @@
   --width-main: 100vw;
   --width-add: 1180px;
   --width-logo: 137px;
+  --title-font-size: 32px;
+  --section-font-size: 18px;
 }
 /*reset*/
 * {
@@ -103,7 +105,7 @@ button {
   }
 }
 .section__title {
-  font: 800 32px/1 var(--font-family);
+  font: 800 var(--title-font-size)/1 var(--font-family);
   color: #18121E;
   display: flex;
   gap: 8px;
@@ -111,7 +113,7 @@ button {
   align-items: center;
 }
 .section__text {
-  font: 400 18px/1.5 var(--font-family);
+  font: 400 var(--section-font-size)/1.5 var(--font-family);
   color: #18121E;
 }
 /*header*/
@@ -242,19 +244,19 @@ button {
 }
 .discover {
   width: var(--width-add);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 120px;
+  height: calc(var(--width-add) * 0.446);
+  display: grid;
+  grid-template-columns: calc(var(--width-add) * 0.407) 1fr;
+  grid-template-rows: calc(var(--width-add) * 0.446);
+  gap: calc(var(--width-add) * 0.1);
 }
 .discover__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
-  width: calc(var(--width-add) * 0.405);
-  height: calc(var(--width-add) * 0.445);
+  gap: 2.22em;
+  /*max-height: 100%;*/
   position: relative;
 }
 .discover__item-image, .discover__item-video {
@@ -419,6 +421,8 @@ button {
   :root {
     --width-add: 95dvw;
     --width-logo: 84px;
+    --title-font-size: 28px;
+    --section-font-size: 16px;
   }
   .nav__list {
     font: 400 14px/1 var(--font-family);
@@ -426,9 +430,17 @@ button {
   .form__title {
     font: 700 32px/1.5 'Next Art', serif;
   }
+  .discover__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
 }
 @media (max-width: 800px)/* for tablet */ {
   :root {
+    --title-font-size: 24px;
+    --section-font-size: 12px;
   }
   .nav__list {
     font: 400 12px/1 var(--font-family);
