@@ -708,7 +708,9 @@ button {
   .column-item__list-line.contacts {
     flex-direction: column;
   }
-  /*directions add SWIPER*/
+  .cards_blur_description, .cards_blur_subtitle{
+    display: none;
+  }
 }
 @media (max-width: 600px)/* for mobile */ {
   :root {
