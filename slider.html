@@ -5,34 +5,55 @@
   <title>slider</title>
   <style>
     .wrapper{
-      width: 100%;
+      width: 95dvw;
     }
     .slider {
-      width: 100%;
+      width: 95dvw;
       overflow: hidden;
       position: relative;
     }
-    .slides {
+    .cards {
       display: flex;
-      width: 300%;
+      width: 285dvw;
       transition: transform 0.5s ease-in-out;
     }
-    .slide {
+    .cards_item {
       flex-shrink: 0;
     }
-    .slide img {
-      width: 100dvw;
+    .cards_item img {
+      width: 95dvw;
       height: 110dvw;
       object-fit: cover;
+      border-radius: 15px;
+      padding: 5px;
     }
-    #slide1:checked ~ .slides {
+    input[type=radio] {
+      display: none;
+      }
+    #slide1:checked ~ .cards {
       transform: translateX(0);
     }
-    #slide2:checked ~ .slides {
-      transform: translateX(-100dvw);
+    #slide2:checked ~ .cards {
+      transform: translateX(-95dvw);
     }
-    #slide3:checked ~ .slides {
-      transform: translateX(-200dvw);
+    #slide3:checked ~ .cards {
+      transform: translateX(-190dvw);
+    }
+    .controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .controls label {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background: gray;
+      border-radius: 50%;
+      margin: 5px;
+      cursor: pointer;
+    }
+    input:checked + label {
+      background: black;
     }
   </style>
 </head>
@@ -42,10 +63,10 @@
     <input type="radio" name="slider" id="slide1" checked>
     <input type="radio" name="slider" id="slide2">
     <input type="radio" name="slider" id="slide3">
-    <div class="slides">
-      <div class="slide"><img src="image/dc1.jpg" alt="lake"></div>
-      <div class="slide"><img src="image/dc2.jpg" alt="mountain"></div>
-      <div class="slide"><img src="image/dc3.jpg" alt="yoga"></div>
+    <div class="cards">
+      <div class="cards_item"><img src="image/dc1.jpg" alt="lake"></div>
+      <div class="cards_item"><img src="image/dc2.jpg" alt="mountain"></div>
+      <div class="cards_item"><img src="image/dc3.jpg" alt="yoga"></div>
     </div>
     <div class="controls">
       <label for="slide1"></label>
