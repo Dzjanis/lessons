@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slider</title>
+    <style>
+        .slider{
+            width: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slides{
+            display: flex;
+            width: 300%;
+            overflow: hidden;
+        }
+        img {
+            width: 300px;
+            flex-shrink: 0;
+        }
+        #slide1:checked ~ .slides{transform: translateX(0);}
+        #slide2:checked ~ .slides{transform: translateX(-390px);}
+        #slide3:checked ~ .slides{transform: translateX(-780px);}
+    </style>
+</head>
+<body>
+<div class="slider">
+    <label>
+        <input type="radio" name="slider" id="slide1" checked>
+    </label>
+    <label>
+        <input type="radio" name="slider" id="slide2" >
+    </label>
+    <label>
+        <input type="radio" name="slider" id="slide3" >
+    </label>
+</div>
+<div class="slides">
+    <img src="image/dc1.jpg" alt="lake">
+    <img src="image/dc2.jpg" alt="mountain">
+    <img src="image/dc3.jpg" alt="yoga">
+</div>
+<!--<div class="controls">-->
+<!--    <label for="slide1"></label>-->
+<!--    <label for="slide2"></label>-->
+<!--    <label for="slide3"></label>-->
+</div>
+</body>
+</html>
