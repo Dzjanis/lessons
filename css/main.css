@@ -237,7 +237,7 @@ button {
 }
 /*main*/
 .main {
-  padding: calc(var(--width-add) * 0.084) 0;
+  padding: calc(var(--width-add) * 0.084) 0 0;
   & .section__button {
     margin: 0;
   }
@@ -247,20 +247,22 @@ button {
   padding: calc(var(--width-add) * 0.068) 0 calc(var(--width-add) * 0.084) 0;
   margin-bottom: 100px;
 }
-.discover, .programs {
+.discover, .programs, .directions, .blog, .impressions {
   width: var(--width-add);
-  display: grid;
 }
+.directions, .blog, .impressions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*discover*/
 .discover {
+  display: grid;
   grid-template-columns: calc(var(--width-add) * 0.407) 1fr;
   grid-template-rows: calc(var(--width-add) * 0.446);
   gap: calc(var(--width-add) * 0.1);
   margin-bottom: 100px;
-}
-.programs {
-  grid-template-columns: 1fr calc(var(--width-add) * 0.432);
-  grid-template-rows: auto;
-  gap: calc(var(--width-add) * 0.1);
 }
 .discover__item {
   display: flex;
@@ -293,6 +295,13 @@ button {
     font: 400 18px/1 var(--font-family);
     color: #F2BE22
   }
+}
+/*programs*/
+.programs {
+  display: grid;
+  grid-template-columns: 1fr calc(var(--width-add) * 0.432);
+  grid-template-rows: auto;
+  gap: calc(var(--width-add) * 0.1);
 }
 .programs__item .section__title {
   align-items: flex-start;
@@ -334,7 +343,7 @@ button {
   text-align: justify;
   grid-row: 2/3;
 }
-.programs__images{
+.programs__images {
   width: calc(var(--width-add) * 0.43);
   height: calc(var(--width-add) * 0.43);
   display: grid;
@@ -346,7 +355,7 @@ button {
   justify-content: center;
   overflow: hidden;
 }
-.programs__images_item{
+.programs__images_item {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -357,6 +366,106 @@ button {
   }
   &:nth-child(2), &:nth-child(3) {
     border-radius: 50px 0 50px 0;
+  }
+}
+/*directions*/
+.directions {
+  margin-bottom: 100px;
+  gap: 50px;
+}
+.directions .section__title {
+  align-items: center;
+  &::before {
+    content: 'по версии отдыхающих';
+    font: 400 18px/1 var(--font-family);
+    color: #F2BE22
+  }
+}
+.directions__cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.directions__cards_item, .directions__cards_image, .directions__cards_blur {
+  width: calc(var(--width-add) * 0.32);
+  height: calc(var(--width-add) * 0.42);
+}
+.directions__cards_item {
+  overflow: hidden;
+  position: relative;
+}
+.directions__cards_image {
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 32px;
+  background-color: #D9D9D9;
+}
+.directions__cards_blur {
+  background-color: #1A3E3E00;
+  display: grid;
+  backdrop-filter: blur(3px);
+  grid-template-areas:
+  "title price"
+  "description description"
+  "button button";
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto 1fr auto;
+  gap: 2.5em 0;
+  position: relative;
+  transform: translateY(-90px);
+  transition: transform 1s ease-in-out;
+  font: 400 16px/1.5 var(--font-family);
+  padding: 2em 2em 1.25em;
+  &:hover {
+    border-radius: 32px;
+    transform: translateY(-100%);
+  }
+}
+.cards_blur_title {
+  font: 700 24px/1 var(--font-family);
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: flex-start;
+  color: #FDFDFD;
+  grid-area: title;
+  &::after{
+    content:'романтическое приключение';
+    font: 400 14px/1 var(--font-family);
+  }
+}
+.cards_blur_price {
+  align-self: center;
+  background-color: #ffffff30;
+  grid-area: price;
+}
+.cards_blur_description {
+  grid-area: description;
+}
+.directions__cards_blur .section__button {
+  padding: 0.75em 1.5em;
+  transform: scale(0.88);
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+/*blog*/
+.blog .section__title {
+  align-items: center;
+  &::before {
+    content: 'делимся впечатлениями';
+    font: 400 18px/1 var(--font-family);
+    color: #F2BE22
+  }
+}
+/*impressions*/
+.impressions .section__title {
+  align-items: center;
+  &::before {
+    content: 'фото-отчет';
+    font: 400 18px/1 var(--font-family);
+    color: #F2BE22
   }
 }
 /*subscribe*/
@@ -669,13 +778,12 @@ button {
     grid-template-columns: var(--width-add);
     grid-template-rows: auto;
   }
-  .programs__item{
+  .programs__item {
     align-items: center;
   }
-  .programs__images{
+  .programs__images {
     display: none;
   }
-
   /*footer*/
   .footer {
     height: 979px;
