@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>slider</title>
-    <style>
-        .slider{
-            width: 300px;
-            overflow: hidden;
-            position: relative;
-        }
-        .slides{
-            display: flex;
-            width: 300%;
-            overflow: hidden;
-        }
-        img {
-            width: 300px;
-            flex-shrink: 0;
-        }
-        #slide1:checked ~ .slides{transform: translateX(0);}
-        #slide2:checked ~ .slides{transform: translateX(-390px);}
-        #slide3:checked ~ .slides{transform: translateX(-780px);}
-    </style>
+  <meta charset="UTF-8">
+  <title>slider</title>
+  <style>
+    .wrapper{
+      width: 100%;
+    }
+    .slider {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .slides {
+      display: flex;
+      width: 300%;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      flex-shrink: 0;
+    }
+    .slide img {
+      width: 100dvw;
+      height: 110dvw;
+      object-fit: cover;
+    }
+    #slide1:checked ~ .slides {
+      transform: translateX(0);
+    }
+    #slide2:checked ~ .slides {
+      transform: translateX(-100dvw);
+    }
+    #slide3:checked ~ .slides {
+      transform: translateX(-200dvw);
+    }
+  </style>
 </head>
 <body>
-<div class="slider">
-    <label>
-        <input type="radio" name="slider" id="slide1" checked>
-    </label>
-    <label>
-        <input type="radio" name="slider" id="slide2" >
-    </label>
-    <label>
-        <input type="radio" name="slider" id="slide3" >
-    </label>
-</div>
-<div class="slides">
-    <img src="image/dc1.jpg" alt="lake">
-    <img src="image/dc2.jpg" alt="mountain">
-    <img src="image/dc3.jpg" alt="yoga">
-</div>
-<!--<div class="controls">-->
-<!--    <label for="slide1"></label>-->
-<!--    <label for="slide2"></label>-->
-<!--    <label for="slide3"></label>-->
+<div class="wrapper">
+  <div class="slider">
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+    <div class="slides">
+      <div class="slide"><img src="image/dc1.jpg" alt="lake"></div>
+      <div class="slide"><img src="image/dc2.jpg" alt="mountain"></div>
+      <div class="slide"><img src="image/dc3.jpg" alt="yoga"></div>
+    </div>
+    <div class="controls">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+    </div>
+  </div>
 </div>
 </body>
 </html>
