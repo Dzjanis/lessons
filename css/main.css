@@ -87,7 +87,7 @@ button {
   left: 50%;
   transform: translatex(-50%);
 }
-.section__button {
+.section__button, .section__link {
   font: 600 16px/1 var(--font-family);
   margin-left: 1.28em;
   background-color: #1A3E3E;
@@ -249,6 +249,7 @@ button {
 }
 .discover, .programs, .directions, .blog, .impressions {
   width: var(--width-add);
+  gap: 50px;
 }
 .directions, .blog, .impressions {
   display: flex;
@@ -262,7 +263,7 @@ button {
   grid-template-columns: calc(var(--width-add) * 0.407) 1fr;
   grid-template-rows: calc(var(--width-add) * 0.446);
   gap: calc(var(--width-add) * 0.1);
-  margin-bottom: 100px;
+  margin-bottom: calc(var(--width-add) * 0.085);
 }
 .discover__item {
   display: flex;
@@ -401,44 +402,80 @@ button {
   border-radius: 32px;
   background-color: #D9D9D9;
 }
+.directions__rating{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  padding-right:0.5em;
+  background-color: #ffffff30;
+}
+.directions__rating_stars {
+  width: 1em;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: width 0.3s ease;
+  &:hover{
+    width: 5em;
+  }
+}
+.directions__rating_value{
+  font: 700 14px/1 var(--font-family);
+  color: #18121E;
+}
+.rating__point span{
+  color: inherit;
+}
+.rating__point{
+  color: #F2BE22;
+  cursor: pointer;
+  &:hover ~ .rating__point{
+    color: #FDFDFD;
+  }
+}
 .directions__cards_blur {
-  background-color: #1A3E3E00;
+  background-color: #ffffff40;
   display: grid;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(1px);
   grid-template-areas:
   "title price"
   "description description"
   "button button";
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 3fr 1fr ;
   grid-template-rows: auto 1fr auto;
+  justify-items: start;
   gap: 2.5em 0;
   position: relative;
-  transform: translateY(-90px);
+  transform: translateY(-18%);
   transition: transform 1s ease-in-out;
   font: 400 16px/1.5 var(--font-family);
-  padding: 2em 2em 1.25em;
+  padding: 1em;
   &:hover {
     border-radius: 32px;
-    transform: translateY(-100%);
+    transform: translateY(-101%);
   }
 }
-.cards_blur_title {
+.cards_blur_title{
   font: 700 24px/1 var(--font-family);
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: flex-start;
   color: #FDFDFD;
   grid-area: title;
-  &::after{
-    content:'романтическое приключение';
-    font: 400 14px/1 var(--font-family);
-  }
+}
+.cards_blur_subtitle{
+  font: 400 14px/1 var(--font-family);
+  position: relative;
+  top: 1.5em;
+  grid-area: title;
 }
 .cards_blur_price {
   align-self: center;
   background-color: #ffffff30;
   grid-area: price;
+  padding: 1em 2em;
+  border-radius: 0.25em;
 }
 .cards_blur_description {
   grid-area: description;
@@ -451,6 +488,9 @@ button {
   }
 }
 /*blog*/
+.blog{
+
+}
 .blog .section__title {
   align-items: center;
   &::before {
@@ -623,6 +663,23 @@ button {
     align-items: flex-start;
     gap: 1em;
   }
+  .directions__cards_blur{
+    gap: 1em 0;
+    padding: 0.25em;
+  }
+  .cards_blur_title{
+    font-size: 18px;
+  }
+  .cards_blur_subtitle{
+    font-size: 12px;
+  }
+  .cards_blur_price{
+    font-size: 14px;
+    padding: 0.5em 1em;
+  }
+  .cards_blur_description{
+    font-size: 12px;
+  }
 }
 @media (max-width: 800px)/* for tablet */ {
   :root {
@@ -651,6 +708,7 @@ button {
   .column-item__list-line.contacts {
     flex-direction: column;
   }
+  /*directions add SWIPER*/
 }
 @media (max-width: 600px)/* for mobile */ {
   :root {
