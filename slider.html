@@ -13,10 +13,9 @@
       color: var(--font-color);
     }
     :root{
-      --width-add: 92dvw;
-      --width-main: 100vw
+      --width-main: 100vw /*ширина колонки*/
     }
-    .cards__gallery{ /*обложка слайдера*/
+    .cards__container{ /*обложка слайдера*/
       width: var(--width-main);
       max-width: 600px;
       padding: 16px;
@@ -44,54 +43,30 @@
       object-fit: cover;
     }
     /*управление*/
-    input[type=radio] {
-      display: none;
-    }
-    #slide1:checked ~ .cards {
-      transform: translateX(0);
-    }
-    #slide2:checked ~ .cards {
-      transform: translateX(calc(-100vw + 16px));
-    }
-    #slide3:checked ~ .cards {
-      transform: translateX(calc(-200vw + 32px));
-    }
-    #slide4:checked ~ .cards {
-      transform: translateX(calc(-300vw + 48px));
-    }
-    #slide5:checked ~ .cards {
-      transform: translateX(calc(-400vw + 64px));
-    }
-    #slide6:checked ~ .cards {
-      transform: translateX(calc(-500vw + 80px));
-    }
-    .controls {
-      text-align: center;
-      margin-top: 10px;
-    }
-    .controls label {
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      background-color: gray;
-      border-radius: 50%;
-      margin: 5px;
+    .bck, .frw {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
       cursor: pointer;
-    }
-    input:checked + label {
-      background-color: black;
+      font-size: 18px;
+      font-weight: bold;
+      z-index: 2;
+      &.bck {
+        left: 10px;
+      }
+      &.frw {
+        right: 10px;
+      }
     }
   </style>
 </head>
 <body>
-<div class="cards__gallery">
+<div class="cards__container">
   <div class="slider">
-    <input type="radio" name="slider" id="slide1" checked>
-    <input type="radio" name="slider" id="slide2">
-    <input type="radio" name="slider" id="slide3">
-    <input type="radio" name="slider" id="slide4">
-    <input type="radio" name="slider" id="slide5">
-    <input type="radio" name="slider" id="slide6">
     <div class="cards">
       <div class="cards_item"><img src="image/imp1.jpg" alt="photo"></div>
       <div class="cards_item"><img src="image/imp2.jpg" alt="map"></div>
@@ -100,15 +75,47 @@
       <div class="cards_item"><img src="image/imp5.jpg" alt="bay"></div>
       <div class="cards_item"><img src="image/imp6.jpg" alt="diary"></div>
     </div>
-    <div class="controls">
-      <label for="slide1"></label>
-      <label for="slide2"></label>
-      <label for="slide3"></label>
-      <label for="slide4"></label>
-      <label for="slide5"></label>
-      <label for="slide6"></label>
-    </div>
+    <button class="bck">&#10094;</button>
+    <button class="frw">&#10095;</button>
   </div>
 </div>
+<script>
+    // Находим контейнер со слайдами
+    const slides = document.querySelector('.cards');
+
+    // Определяем количество слайдов
+    const slideCount = document.querySelectorAll('.cards_item').length;
+
+    // Находим кнопки «Назад» и «Вперёд»
+    const prevButton = document.querySelector('.bck');
+    const nextButton = document.querySelector('.frw');
+
+    let currentIndex = 0; // Переменная для хранения текущего слайда
+
+    // Функция смены слайдов
+    function goToSlide(index) {
+        if (index < 0) {
+            index = slideCount - 1; // Если нажали «Назад» на первом слайде, переходим на последний
+        } else if (index >= slideCount) {
+            index = 0; // Если нажали «Вперёд» на последнем слайде, переходим на первый
+        }
+
+        currentIndex = index; // Запоминаем текущий слайд
+        slides.style.transform = `translateX(calc(${-index * 100}vw + ${index * 16}px))`; // Сдвигаем контейнер со слайдами
+    }
+
+    // Добавляем обработчик клика для кнопки «Назад»
+    prevButton.addEventListener('click', () => {
+        goToSlide(currentIndex - 1);
+    });
+
+    // Добавляем обработчик клика для кнопки «Вперёд»
+    nextButton.addEventListener('click', () => {
+        goToSlide(currentIndex + 1);
+    });
+
+    // Устанавливаем первый активный слайд при загрузке страницы
+    goToSlide(0);
+</script>
 </body>
 </html>

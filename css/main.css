@@ -404,14 +404,14 @@ button {
   border-radius: 32px;
   background-color: #D9D9D9;
 }
-.directions__rating{
+.directions__rating {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 10%;
   right: 0;
-  padding-right:0.5em;
+  padding-right: 0.5em;
   background-color: #ffffff30;
 }
 .directions__rating_stars {
@@ -421,21 +421,21 @@ button {
   justify-content: flex-start;
   align-items: center;
   transition: width 0.3s ease;
-  &:hover{
+  &:hover {
     width: 5em;
   }
 }
-.directions__rating_value{
+.directions__rating_value {
   font: 700 14px/1 var(--font-family);
   color: #18121E;
 }
-.rating__point span{
+.rating__point span {
   color: inherit;
 }
-.rating__point{
+.rating__point {
   color: #F2BE22;
   cursor: pointer;
-  &:hover ~ .rating__point{
+  &:hover ~ .rating__point {
     color: #FDFDFD;
   }
 }
@@ -447,7 +447,7 @@ button {
   "title price"
   "description description"
   "button button";
-  grid-template-columns: 3fr 1fr ;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: auto 1fr auto;
   justify-items: start;
   gap: 2.5em 0;
@@ -461,12 +461,12 @@ button {
     transform: translateY(-101%);
   }
 }
-.cards_blur_title{
+.cards_blur_title {
   font: 700 24px/1 var(--font-family);
   color: #FDFDFD;
   grid-area: title;
 }
-.cards_blur_subtitle{
+.cards_blur_subtitle {
   font: 400 14px/1 var(--font-family);
   position: relative;
   top: 1.5em;
@@ -486,13 +486,12 @@ button {
 .directions__cards_blur .section__button {
   padding: 0.75em 1.5em;
   transform: scale(0.88);
-  &:hover{
+  &:hover {
     transform: scale(1.05);
   }
 }
 /*blog*/
-.blog{
-
+.blog {
 }
 .blog .section__title {
   align-items: center;
@@ -664,21 +663,21 @@ button {
     align-items: flex-start;
     gap: 1em;
   }
-  .directions__cards_blur{
+  .directions__cards_blur {
     gap: 1em 0;
     padding: 0.25em;
   }
-  .cards_blur_title{
+  .cards_blur_title {
     font-size: 18px;
   }
-  .cards_blur_subtitle{
+  .cards_blur_subtitle {
     font-size: 12px;
   }
-  .cards_blur_price{
+  .cards_blur_price {
     font-size: 14px;
     padding: 0.5em 1em;
   }
-  .cards_blur_description{
+  .cards_blur_description {
     font-size: 12px;
   }
 }
@@ -842,6 +841,54 @@ button {
   }
   .programs__images {
     display: none;
+  }
+  /*impression_slider*/
+  .impressions__cards__container { /*обложка слайдера*/
+    width: var(--width-main);
+    max-width: 600px;
+    padding: 16px;
+  }
+  .impressions__slider { /*контейнер слайдера*/
+    width: calc(var(--width-main) - 32px);
+    overflow: hidden;
+    position: relative;
+  }
+  .impressions__cards { /*контейнер для всех слайдов*/
+    display: flex;
+    width: 600%;
+    gap: 16px;
+    transition: transform 0.5s ease-in-out;
+  }
+  .impressions__cards_item { /*карточка*/
+    width: calc(var(--width-main) - 32px);
+    height: 105dvw;
+    flex-shrink: 0;
+  }
+  .impressions__cards_item img { /*картинка в карточке*/
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  /*управление*/
+  .impressions__bck, .impressions__frw {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2;
+    &.impressions__bck {
+      left: 10px;
+    }
+    &.impressions__frw {
+      right: 10px;
+    }
   }
   /*footer*/
   .footer {
