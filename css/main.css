@@ -238,6 +238,7 @@ button {
 /*main*/
 .main {
   padding: calc(var(--width-add) * 0.084) 0 0;
+  z-index: 10;
   & .section__button {
     margin: 0;
   }
@@ -382,6 +383,7 @@ button {
     color: #F2BE22
   }
 }
+/*start slider*/
 .directions__cards {
   display: flex;
   justify-content: space-between;
@@ -480,6 +482,7 @@ button {
 .cards_blur_description {
   grid-area: description;
 }
+/*end slider*/
 .directions__cards_blur .section__button {
   padding: 0.75em 1.5em;
   transform: scale(0.88);
@@ -513,17 +516,15 @@ button {
   width: var(--width-add);
   height: 196px;
   display: grid;
-  grid-template-columns: calc(var(--width-add) * 0.32) 1fr;
+  grid-template-columns: calc(var(--width-add) * .32) 1fr;
   grid-template-rows: 1fr 36px;
-  gap: 1px calc(var(--width-add) * 0.054);
-  padding: 40px calc(var(--width-add) * 0.084);
+  gap: 1px calc(var(--width-add) * .054);
+  padding: 40px calc(var(--width-add) * .084);
   background-color: #ffffff;
   border-radius: 6px;
   box-shadow: 0 0 15px 0 #18121E1F;
   position: relative;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  z-index: 100;
+  transform: translate(0, 50%);
   color: #18121E;
   font: 600 14px/18px var(--font-family);
 }
@@ -708,9 +709,6 @@ button {
   .column-item__list-line.contacts {
     flex-direction: column;
   }
-  .cards_blur_description, .cards_blur_subtitle{
-    display: none;
-  }
 }
 @media (max-width: 600px)/* for mobile */ {
   :root {
@@ -788,7 +786,8 @@ button {
   }
   /*main*/
   .subscribe {
-    transform: translate(-50%, 0);
+    margin: 50px 0;
+    transform: translate(0, 0);
     height: 351px;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);

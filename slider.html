@@ -4,29 +4,34 @@
   <meta charset="UTF-8">
   <title>slider</title>
   <style>
-    .wrapper{
-      width: 95dvw;
+    .wrapper{ /*обложка слайдера*/
+      width: 100dvw;
+      max-width: 390px;
+      padding: 5px;
     }
-    .slider {
-      width: 95dvw;
+    .slider { /*контейнер слайдера*/
+      width: calc(100dvw - 10px);
       overflow: hidden;
       position: relative;
     }
-    .cards {
+    .cards { /*контейнер для всех слайдов*/
       display: flex;
-      width: 285dvw;
+      width: 300%;
+      gap: 10px;
       transition: transform 0.5s ease-in-out;
     }
-    .cards_item {
+    .cards_item { /*карточка*/
+      width: calc(100dvw - 10px);
+      height: 105dvw;
       flex-shrink: 0;
     }
-    .cards_item img {
-      width: 95dvw;
-      height: 110dvw;
+    .cards_item img { /*картинка в карточке*/
+      width: calc(100% - 10px);
+      height: 100%;
+      border-radius: 10px;
       object-fit: cover;
-      border-radius: 15px;
-      padding: 5px;
     }
+    /*управление*/
     input[type=radio] {
       display: none;
       }
@@ -34,10 +39,10 @@
       transform: translateX(0);
     }
     #slide2:checked ~ .cards {
-      transform: translateX(-95dvw);
+      transform: translateX(-100dvw);
     }
     #slide3:checked ~ .cards {
-      transform: translateX(-190dvw);
+      transform: translateX(-200dvw);
     }
     .controls {
       text-align: center;
@@ -47,13 +52,13 @@
       display: inline-block;
       width: 15px;
       height: 15px;
-      background: gray;
+      background-color: gray;
       border-radius: 50%;
       margin: 5px;
       cursor: pointer;
     }
     input:checked + label {
-      background: black;
+      background-color: black;
     }
   </style>
 </head>
