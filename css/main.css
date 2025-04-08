@@ -883,7 +883,7 @@ button {
     position: relative;
   }
   .impressions__cards { /*контейнер для всех слайдов*/
-    width: 600%;
+    width: 800%;
     display: flex;
     gap: 16px;
     transition: transform 0.5s ease-in-out;

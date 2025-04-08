@@ -15,7 +15,7 @@
     :root{
       --width-main: 100vw /*ширина колонки*/
     }
-    .cards__container{ /*обложка слайдера*/
+    .section{ /*обложка слайдера*/
       width: var(--width-main);
       max-width: 600px;
       padding: 16px;
@@ -65,7 +65,7 @@
   </style>
 </head>
 <body>
-<div class="cards__container">
+<div class="section">
   <div class="slider">
     <div class="cards">
       <div class="cards_item"><img src="image/imp1.jpg" alt="photo"></div>
@@ -80,24 +80,20 @@
   </div>
 </div>
 <script>
-    // Находим контейнер со слайдами
     const slides = document.querySelector('.cards');
 
-    // Определяем количество слайдов
     const slideCount = document.querySelectorAll('.cards_item').length;
 
-    // Находим кнопки «Назад» и «Вперёд»
     const prevButton = document.querySelector('.bck');
     const nextButton = document.querySelector('.frw');
 
-    let currentIndex = 0; // Переменная для хранения текущего слайда
+    let currentIndex = 0;
 
-    // Функция смены слайдов
     function goToSlide(index) {
         if (index < 0) {
-            index = slideCount - 1; // Если нажали «Назад» на первом слайде, переходим на последний
+            index = slideCount - 1;
         } else if (index >= slideCount) {
-            index = 0; // Если нажали «Вперёд» на последнем слайде, переходим на первый
+            index = 0;
         }
 
         currentIndex = index; // Запоминаем текущий слайд
