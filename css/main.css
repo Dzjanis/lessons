@@ -384,25 +384,32 @@ button {
   }
 }
 /*start slider*/
-.directions__cards {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-.directions__cards_item, .directions__cards_image, .directions__cards_blur {
-  width: calc(var(--width-add) * 0.32);
-  height: calc(var(--width-add) * 0.42);
-}
-.directions__cards_item {
+.directions__slider { /*контейнер слайдера*/
+  width: var(--width-add);
   overflow: hidden;
   position: relative;
 }
-.directions__cards_image {
+.directions__cards { /*контейнер для всех слайдов*/
+  width: var(--width-add);
+  display: flex;
+  gap: 24px;
+  transition: transform .5s ease-in-out;
+}
+.directions__cards_item {
+  width: calc(var(--width-add) * .322);
+  height: calc(var(--width-add) * .424);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 32px;
+}
+.directions__cards_item img{
+  height: calc(var(--width-add) * .424);
   object-fit: cover;
   object-position: center center;
-  border-radius: 32px;
-  background-color: #D9D9D9;
+  position: relative;
 }
 .directions__rating {
   display: flex;
@@ -440,6 +447,8 @@ button {
   }
 }
 .directions__cards_blur {
+  height: calc(var(--width-add) * .424);
+  width: calc(var(--width-add) * .322);
   background-color: #ffffff40;
   display: grid;
   backdrop-filter: blur(1px);
@@ -482,14 +491,14 @@ button {
 .cards_blur_description {
   grid-area: description;
 }
-/*end slider*/
-.directions__cards_blur .section__button {
+.directions__cards_blur .section__link {
   padding: 0.75em 1.5em;
   transform: scale(0.88);
   &:hover {
     transform: scale(1.05);
   }
 }
+/*end slider*/
 /*blog*/
 .blog {
 }
@@ -510,31 +519,31 @@ button {
     color: #F2BE22
   }
 }
-.impressions__bck, .impressions__frw{
+.impressions__bck, .impressions__frw {
   display: none;
 }
-.impressions__cards__container, .impressions__slider, .impressions__cards{
+.impressions__cards__container, .impressions__slider, .impressions__cards {
   width: var(--width-add);
   overflow: hidden;
 }
-.impressions__cards  {
+.impressions__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, calc(var(--width-add) * 0.212));
   gap: 20px;
 }
-.impressions__cards_item img{
+.impressions__cards_item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center center;
 }
-.impressions__cards_item{
-  &:first-child{
+.impressions__cards_item {
+  &:first-child {
     grid-column: 1/3;
     grid-row: 1/2;
   }
-  &:nth-last-child(2){
+  &:nth-last-child(2) {
     grid-column: -2/-4;
     grid-row: -1/-2;
   }
@@ -813,25 +822,6 @@ button {
     display: flex;
   }
   /*main*/
-  .subscribe {
-    margin: 50px 0;
-    transform: translate(0, 0);
-    height: 351px;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 0 8px;
-  }
-  .subscribe .section__title {
-    grid-row: 1/2;
-  }
-  .subscribe__form_fieldset {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  .subscribe__form_input {
-    width: calc(var(--width-add) * 0.86);
-  }
   .discover {
     grid-template-columns: var(--width-add);
     grid-template-rows: auto 1fr;
@@ -871,12 +861,51 @@ button {
   .programs__images {
     display: none;
   }
-  /*impression_slider*/
-  .impressions__cards__container { /*обложка слайдера*/
-    width: var(--width-main);
-    max-width: 600px;
-    padding: 16px;
+  /*direction*/
+  /*direction_slider*/
+  .directions__slider { /*контейнер слайдера*/
+    width: calc(var(--width-main) - 48px);
+    overflow: hidden;
+    position: relative;
   }
+  .directions__cards { /*контейнер для всех слайдов*/
+    width: 800%;
+    display: flex;
+    gap: 24px;
+    transition: transform .5s ease-in-out;
+  }
+  .directions__cards_item { /*карточка*/
+    width: calc(var(--width-main) - 48px);
+    height: calc(var(--width-main) * 1.4);
+    flex-shrink: 0;
+  }
+  .directions__cards_item img { /*картинка в карточке*/
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    object-fit: cover;
+  }
+  .directions__bck, .directions__frw {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2;
+    &.directions__bck {
+      left: 10px;
+    }
+    &.directions__frw {
+      right: 10px;
+    }
+  }
+  /*impression_slider*/
   .impressions__slider { /*контейнер слайдера*/
     width: calc(var(--width-main) - 32px);
     overflow: hidden;
@@ -886,11 +915,11 @@ button {
     width: 800%;
     display: flex;
     gap: 16px;
-    transition: transform 0.5s ease-in-out;
+    transition: transform .5s ease-in-out;
   }
   .impressions__cards_item { /*карточка*/
     width: calc(var(--width-main) - 32px);
-    height: 105dvw;
+    height: calc(var(--width-main) * .9);
     flex-shrink: 0;
   }
   .impressions__cards_item img { /*картинка в карточке*/
@@ -904,7 +933,7 @@ button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, .5);
     color: white;
     border: none;
     padding: 10px;
@@ -918,6 +947,26 @@ button {
     &.impressions__frw {
       right: 10px;
     }
+  }
+  /*subscribe*/
+  .subscribe {
+    margin: 50px 0;
+    transform: translate(0, 0);
+    height: 351px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0 8px;
+  }
+  .subscribe .section__title {
+    grid-row: 1/2;
+  }
+  .subscribe__form_fieldset {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .subscribe__form_input {
+    width: calc(var(--width-add) * 0.86);
   }
   /*footer*/
   .footer {
