@@ -102,6 +102,7 @@
 
         currentIndex = index; // Запоминаем текущий слайд
         slides.style.transform = `translateX(calc(${-index * 100}vw + ${index * 16}px))`; // Сдвигаем контейнер со слайдами
+        console.log(currentIndex);
     }
 
     // Добавляем обработчик клика для кнопки «Назад»
