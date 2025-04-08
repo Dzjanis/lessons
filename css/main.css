@@ -383,7 +383,6 @@ button {
     color: #F2BE22
   }
 }
-/*start slider*/
 .directions__slider { /*контейнер слайдера*/
   width: var(--width-add);
   overflow: hidden;
@@ -405,11 +404,70 @@ button {
   position: relative;
   border-radius: 32px;
 }
-.directions__cards_item img{
+.directions__cards_item img {
   height: calc(var(--width-add) * .424);
   object-fit: cover;
   object-position: center center;
   position: relative;
+}
+.directions__cards_blur {
+  font: 400 16px/1.5 var(--font-family);
+  width: calc(var(--width-add) * .322);
+  min-height: calc(var(--width-add) * .424);
+  background-color: #ffffff40;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  /*backdrop-filter: blur(1px);*/
+  position: relative;
+  transform: translateY(-18%);
+  transition: transform .5s ease;
+  &:hover {
+    border-radius: 32px;
+    transform: translateY(-100%);
+  }
+}
+.cards_blur_title {
+  font: 700 24px/1 var(--font-family);
+  color: #FDFDFD;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: start;
+  padding: .66em 1.333em;
+}
+.cards_blur_subtitle {
+  font: 400 14px/1 var(--font-family);
+  align-self: end;
+  padding: 1.143em 2.286em ;
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.cards_blur_price {
+  font: 400 16px/1.5 var(--font-family);
+  align-self: center;
+  background-color: #ffffff30;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  padding: 1em 2em;
+  border-radius: .25em;
+}
+.cards_blur_description {
+  font: 400 16px/1.5 var(--font-family);
+  align-self: center;
+  padding: 0 2em;
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.directions__cards_blur .section__link {
+  font: 400 16px/1.5 var(--font-family);
+  grid-column: 1/3;
+  grid-row: 3/4;
+  transform: scale(.88);
+  text-align: center;
+  align-self: start;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 .directions__rating {
   display: flex;
@@ -446,59 +504,9 @@ button {
     color: #FDFDFD;
   }
 }
-.directions__cards_blur {
-  height: calc(var(--width-add) * .424);
-  width: calc(var(--width-add) * .322);
-  background-color: #ffffff40;
-  display: grid;
-  backdrop-filter: blur(1px);
-  grid-template-areas:
-  "title price"
-  "description description"
-  "button button";
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: auto 1fr auto;
-  justify-items: start;
-  gap: 2.5em 0;
-  position: relative;
-  transform: translateY(-18%);
-  transition: transform 1s ease-in-out;
-  font: 400 16px/1.5 var(--font-family);
-  padding: 1em;
-  &:hover {
-    border-radius: 32px;
-    transform: translateY(-101%);
-  }
+.directions__bck, .directions__frw{
+  display: none;
 }
-.cards_blur_title {
-  font: 700 24px/1 var(--font-family);
-  color: #FDFDFD;
-  grid-area: title;
-}
-.cards_blur_subtitle {
-  font: 400 14px/1 var(--font-family);
-  position: relative;
-  top: 1.5em;
-  grid-area: title;
-}
-.cards_blur_price {
-  align-self: center;
-  background-color: #ffffff30;
-  grid-area: price;
-  padding: 1em 2em;
-  border-radius: 0.25em;
-}
-.cards_blur_description {
-  grid-area: description;
-}
-.directions__cards_blur .section__link {
-  padding: 0.75em 1.5em;
-  transform: scale(0.88);
-  &:hover {
-    transform: scale(1.05);
-  }
-}
-/*end slider*/
 /*blog*/
 .blog {
 }
@@ -709,7 +717,7 @@ button {
     font-size: 18px;
   }
   .cards_blur_subtitle {
-    font-size: 12px;
+    display: none;
   }
   .cards_blur_price {
     font-size: 14px;
@@ -745,6 +753,9 @@ button {
   }
   .column-item__list-line.contacts {
     flex-direction: column;
+  }
+  .cards_blur_description{
+    display: none;
   }
 }
 @media (max-width: 600px)/* for mobile */ {
@@ -874,14 +885,15 @@ button {
     gap: 24px;
     transition: transform .5s ease-in-out;
   }
-  .directions__cards_item { /*карточка*/
+  .directions__cards_item, .directions__cards_blur { /*карточка*/
     width: calc(var(--width-main) - 48px);
-    height: calc(var(--width-main) * 1.4);
+    min-height: calc(var(--width-main) * 1.4);
     flex-shrink: 0;
   }
+
   .directions__cards_item img { /*картинка в карточке*/
-    width: 100%;
-    height: 100%;
+    width: calc(var(--width-main) - 48px);
+    min-height: calc(var(--width-main) * 1.4);
     border-radius: 32px;
     object-fit: cover;
   }
