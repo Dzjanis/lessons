@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>slider</title>
   <style>
-    .wrapper{ /*обложка слайдера*/
+    .cards__gallery{ /*обложка слайдера*/
       width: 100dvw;
       max-width: 390px;
       padding: 5px;
@@ -34,7 +34,7 @@
     /*управление*/
     input[type=radio] {
       display: none;
-      }
+    }
     #slide1:checked ~ .cards {
       transform: translateX(0);
     }
@@ -43,6 +43,15 @@
     }
     #slide3:checked ~ .cards {
       transform: translateX(-200dvw);
+    }
+    #slide4:checked ~ .cards {
+      transform: translateX(-300dvw);
+    }
+    #slide5:checked ~ .cards {
+      transform: translateX(-400dvw);
+    }
+    #slide6:checked ~ .cards {
+      transform: translateX(-500dvw);
     }
     .controls {
       text-align: center;
@@ -63,20 +72,29 @@
   </style>
 </head>
 <body>
-<div class="wrapper">
+<div class="cards__gallery">
   <div class="slider">
     <input type="radio" name="slider" id="slide1" checked>
     <input type="radio" name="slider" id="slide2">
     <input type="radio" name="slider" id="slide3">
+    <input type="radio" name="slider" id="slide4">
+    <input type="radio" name="slider" id="slide5">
+    <input type="radio" name="slider" id="slide6">
     <div class="cards">
-      <div class="cards_item"><img src="image/dc1.jpg" alt="lake"></div>
-      <div class="cards_item"><img src="image/dc2.jpg" alt="mountain"></div>
-      <div class="cards_item"><img src="image/dc3.jpg" alt="yoga"></div>
+      <div class="cards_item"><img src="image/imp1.jpg" alt="photo"></div>
+      <div class="cards_item"><img src="image/imp2.jpg" alt="map"></div>
+      <div class="cards_item"><img src="image/imp3.jpg" alt="dubai"></div>
+      <div class="cards_item"><img src="image/imp4.jpg" alt="canyon"></div>
+      <div class="cards_item"><img src="image/imp5.jpg" alt="bay"></div>
+      <div class="cards_item"><img src="image/imp6.jpg" alt="diary"></div>
     </div>
     <div class="controls">
       <label for="slide1"></label>
       <label for="slide2"></label>
       <label for="slide3"></label>
+      <label for="slide4"></label>
+      <label for="slide5"></label>
+      <label for="slide6"></label>
     </div>
   </div>
 </div>
