@@ -13,7 +13,7 @@ function goToSlide1(index) {
     index = 0;
   }
   currentIndex1 = index;
-  slides1.style.transform = `translateX(calc(${-index * 100}vw + ${index * 24}px))`;
+  slides1.style.transform = `translateX(calc(${-index * 100}vw + ${index * 52}px))`;
   console.log(currentIndex1);
 }
 
@@ -38,7 +38,7 @@ function goToSlide2(index) {
     index = 0;
   }
   currentIndex2 = index;
-  slides2.style.transform = `translateX(calc(${-index * 100}vw + ${index * 16}px))`;
+  slides2.style.transform = `translateX(calc(${-index * 100}vw + ${index * 52}px))`;
   console.log(currentIndex2);
 }
 
@@ -63,7 +63,7 @@ function goToSlide3(index) {
     index = 0;
   }
   currentIndex3 = index;
-  slides3.style.transform = `translateX(calc(${-index * 100}vw + ${index * 16}px))`;
+  slides3.style.transform = `translateX(calc(${-index * 100}vw + ${index * 52}px))`;
   console.log(currentIndex3);
 }
 

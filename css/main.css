@@ -763,6 +763,7 @@ button {
     --width-logo: 84px;
     --width-add: 92dvw;
   }
+
   /*header*/
   .header {
     height: calc(var(--width-main) * 1.54);
@@ -872,21 +873,22 @@ button {
   .programs__images {
     display: none;
   }
-  /*direction_slider*/
-  .directions__slider { /*контейнер слайдера*/
-    width: calc(var(--width-main) - 48px);
+  /*slider*/
+  .blog__slider, .directions__slider, .impressions__slider { /*контейнер слайдера*/
+    width: calc(var(--width-main) - 104px);
     overflow: hidden;
     position: relative;
   }
-  .directions__cards { /*контейнер для всех слайдов*/
+  .directions__cards, .blog__cards, .impressions__cards{ /*контейнер для всех слайдов*/
     width: 800%;
     display: flex;
-    gap: 24px;
+    gap: 52px;
     transition: transform .5s ease-in-out;
   }
+  /*direction_slider*/
   .directions__cards_item, .directions__cards_blur { /*карточка*/
-    width: calc(var(--width-main) - 48px);
-    min-height: calc(var(--width-main) * 1.4);
+    width: calc(var(--width-main) - 104px);
+    min-height: calc(var(--width-main) * 1.02);
     flex-shrink: 0;
   }
   .cards_blur_description, .cards_blur_subtitle {
@@ -905,12 +907,12 @@ button {
     padding: 2.9em 2.1em;
   }
   .directions__cards_item img { /*картинка в карточке*/
-    width: calc(var(--width-main) - 48px);
-    min-height: calc(var(--width-main) * 1.4);
-    border-radius: 32px;
+    width: 100%;
+    min-height: calc(var(--width-main) * 1.02);
+    border-radius: 2em;
     object-fit: cover;
   }
-  .directions__bck, .directions__frw {
+  .directions__bck, .directions__frw, .blog__bck, .blog__frw, .impressions__bck, .impressions__frw {
     display: block;
     position: absolute;
     top: 50%;
@@ -923,70 +925,65 @@ button {
     font-size: 18px;
     font-weight: bold;
     z-index: 2;
-    &.directions__bck {
+    &.directions__bck, &.blog__bck, &.impressions__bck {
       left: 10px;
     }
-    &.directions__frw {
+    &.directions__frw, &.blog__frw, &.impressions__frw {
       right: 10px;
     }
   }
   /*blog_slider*/
-  .blog__slider { /*контейнер слайдера*/
-    width: calc(var(--width-main) - 32px);
-    overflow: hidden;
-    position: relative;
-  }
-  .blog__cards { /*контейнер для всех слайдов*/
-    width: 800%;
+  .blog__cards_item { /*карточка*/
+    width: calc(var(--width-main) - 104px);
+    flex-shrink: 0;
     display: flex;
     gap: 16px;
-    transition: transform .5s ease-in-out;
-  }
-  .blog__cards_item { /*карточка*/
-    width: calc(var(--width-main) - 32px);
-    height: calc(var(--width-main) * .9);
-    flex-shrink: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
   }
   .blog__cards_item img { /*картинка в карточке*/
     width: 100%;
-    height: 100%;
+    height: calc(var(--width-main) - 110px);
     border-radius: 10px;
     object-fit: cover;
   }
-  .blog__bck, .blog__frw {
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, .5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    z-index: 2;
-    &.blog__bck {
-      left: 10px;
-    }
-    &.blog__frw {
-      right: 10px;
-    }
+  .blog__content {
+    width: 100%;
+    display: grid;
+    gap: 16px 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .blog__content_title, .blog__content_text, .blog__content_link {
+    color: #1A3E3E;
+  }
+  .blog__content_title{
+    font: 700 20px/1.33 var(--font-family);
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .blog__content_text{
+    font: 400 14px/1.5 var(--font-family);
+    grid-column: 1/3;
+    grid-row: 2/3;
+    overflow: hidden;
+  }
+  .blog__content_link{
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .blog__content_date {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    color: #F2BE22;
+  }
+  .blog__content_link, .blog__content_date{
+    font: 700 14px/1 var(--font-family);
   }
   /*impression_slider*/
-  .impressions__slider { /*контейнер слайдера*/
-    width: calc(var(--width-main) - 32px);
-    overflow: hidden;
-    position: relative;
-  }
-  .impressions__cards { /*контейнер для всех слайдов*/
-    width: 800%;
-    display: flex;
-    gap: 16px;
-    transition: transform .5s ease-in-out;
-  }
   .impressions__cards_item { /*карточка*/
-    width: calc(var(--width-main) - 32px);
+    width: calc(var(--width-main) - 104px);
     height: calc(var(--width-main) * .9);
     flex-shrink: 0;
   }
@@ -995,26 +992,6 @@ button {
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
-  }
-  .impressions__bck, .impressions__frw {
-    display: block;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, .5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    z-index: 2;
-    &.impressions__bck {
-      left: 10px;
-    }
-    &.impressions__frw {
-      right: 10px;
-    }
   }
   /*subscribe*/
   .subscribe {
