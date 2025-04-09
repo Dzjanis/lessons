@@ -447,7 +447,10 @@ button {
   font: 400 16px/1.5 var(--font-family);
 }
 .cards_blur_price {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   background-color: #ffffff30;
   grid-column: 2/3;
   grid-row: 1/2;
@@ -458,6 +461,7 @@ button {
   grid-column: 1/3;
   grid-row: 2/3;
   margin: 0 0 0 32px;
+  text-overflow: ellipsis;
 }
 .blur__section__link {
   display: block;
@@ -824,8 +828,14 @@ button {
   .column-item__list-line.contacts {
     flex-direction: column;
   }
-  .cards_blur_description, .cards_blur_subtitle {
+  .cards_blur_subtitle{
     display: none;
+  }
+  .cards_blur_price{
+    margin-right: 5px;
+  }
+  .cards_blur_description, .blur__section__link {
+    font-size: 10px;
     }
 }
 @media (max-width: 600px)/* for mobile */ {
