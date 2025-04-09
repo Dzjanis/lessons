@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<header class="header">
+<header class="header" id="header">
   <nav class="header__nav">
     <a class="nav__link" href="#">
       <svg class="nav__logo" width="137" height="72" viewBox="0 0 137 72" fill="none"
@@ -42,22 +42,22 @@
         </button>
       </li>
       <li class="list__item main_link">
-        <a class="list__item-link" href="#">Главная</a>
+        <a class="list__item-link" href="#header">Главная</a>
       </li>
       <li class="list__item">
-        <a class="list__item-link" href="#">Про гида</a>
+        <a class="list__item-link" href="#discover">Про гида</a>
       </li>
       <li class="list__item">
-        <a class="list__item-link" href="#">Программа тура</a>
+        <a class="list__item-link" href="#programs">Программа тура</a>
       </li>
       <li class="list__item">
-        <a class="list__item-link" href="#">Стоимость</a>
+        <a class="list__item-link" href="#directions">Стоимость</a>
       </li>
       <li class="list__item">
-        <a class="list__item-link" href="#">Блог</a>
+        <a class="list__item-link" href="#blog">Блог</a>
       </li>
       <li class="list__item">
-        <a class="list__item-link" href="#">Контакты</a>
+        <a class="list__item-link" href="#contacts">Контакты</a>
       </li>
       <li class="list__item">
         <button class="section__button" type="button" name="cons-button" id="cons__button">Консультация</button>
@@ -126,7 +126,7 @@
       </video>
     </div>
     <div class="discover__item">
-      <h3 class="section__title">Исследуйте все горные массивы мира вместе с нами</h3>
+      <h3 class="section__title" id="discover">Исследуйте все горные массивы мира вместе с нами</h3>
       <p class="section__text">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух
         тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно
         из
@@ -136,7 +136,7 @@
     </div>
   </section>
   <div class="container">
-    <section class="programs">
+    <section class="programs" id="programs">
       <div class="programs__item">
         <h3 class="section__title">Лучшие программы для тебя</h3>
         <p class="section__text">Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух
@@ -218,7 +218,7 @@
     </section>
   </div>
   <section class="directions">
-    <h3 class="section__title">Популярные направления</h3>
+    <h3 class="section__title" id="directions">Популярные направления</h3>
     <div class="directions__slider">
       <div class="directions__cards">
         <div class="directions__cards_item">
@@ -334,13 +334,13 @@
   </section>
   <div class="container">
     <section class="blog">
-      <h3 class="section__title">Блог о путешествиях</h3>
+      <h3 class="section__title" id="blog">Блог о путешествиях</h3>
       <div class="blog__slider">
         <div class="blog__cards">
           <div class="blog__cards_item">
             <img src="image/b1.jpg" alt="photo">
             <article class="blog__content">
-              <h5 class="blog__content_title">Красивая Италия, какая она в реальности?</h5>
+              <a class="blog__content_title" href="#">Красивая Италия, какая она в реальности?</a>
               <p class="blog__content_text">Для современного мира базовый вектор развития предполагает независимые
                 способы реализации соответствующих условий активизации.</p>
               <time class="blog__content_date" datetime="">01/04/23</time>
@@ -350,7 +350,7 @@
           <div class="blog__cards_item">
             <img src="image/b2.jpg" alt="map">
             <article class="blog__content">
-              <h5 class="blog__content_title">Долой сомнения! Весь мир открыт для вас!</h5>
+              <a class="blog__content_title" href="#">Долой сомнения! Весь мир открыт для вас!</a>
               <p class="blog__content_text">Для современного мира базовый вектор развития предполагает независимые
                 способы реализации соответствующих условий активизации.</p>
               <time class="blog__content_date" datetime="">01/04/23</time>
@@ -360,7 +360,7 @@
           <div class="blog__cards_item">
             <img src="image/b3.jpg" alt="dubai">
             <article class="blog__content">
-              <h5 class="blog__content_title">Как подготовиться к путешествию в одиночку?</h5>
+              <a class="blog__content_title" href="#">Как подготовиться к путешествию в одиночку?</a>
               <p class="blog__content_text">Для современного мира базовый вектор развития предполагает независимые
                 способы реализации соответствующих условий активизации.</p>
               <time class="blog__content_date" datetime="">01/04/23</time>
@@ -370,7 +370,7 @@
           <div class="blog__cards_item">
             <img src="image/b4.jpg" alt="canyon">
             <article class="blog__content">
-              <h5 class="blog__content_title">Индия ... летим?</h5>
+              <a class="blog__content_title" href="#">Индия ... летим?</a>
               <p class="blog__content_text">Для современного мира базовый вектор развития предполагает независимые
                 способы реализации соответствующих условий активизации.</p>
               <time class="blog__content_date" datetime="">01/04/23</time>
@@ -421,7 +421,7 @@
 <footer class="footer">
   <ul class="footer__column">
     <li class="footer__column-item">
-      <h4 class="column-item__title">Компания «РумТибет»</h4>
+      <h4 class="column-item__title" id = "contacts">Компания «РумТибет»</h4>
       <blockquote class="column__item-quote">
         <p>Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий
           назад.</p>

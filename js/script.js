@@ -82,6 +82,7 @@ const formMobile = document.querySelector('.form__fields')
 const formOn = document.getElementById('form_mobile_on');
 const formOff = document.getElementById('form_mobile_off');
 const bodyScroll = document.querySelector('body');
+const menuLinks = document.querySelectorAll('.list__item-link');
 
 menuOn.addEventListener('click', () => {
   menuMobile.style.display = 'flex';
@@ -96,4 +97,9 @@ formOn.addEventListener('click', () => {
 formOff.addEventListener('click', () => {
   formMobile.style.display = 'none';
   bodyScroll.style.position = 'relative';
+});
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menuMobile.style.display = 'none';
+  });
 });
