@@ -78,10 +78,22 @@ nextButton3.addEventListener('click', () => {
 const menuMobile = document.querySelector('.nav__list');
 const menuOn = document.getElementById('burger-mobile-on');
 const menuOff = document.getElementById('burger-mobile-off');
+const formMobile = document.querySelector('.form__fields')
 const formOn = document.getElementById('form_mobile_on');
-const formOff = document.getElementById('form_mobile_of')
-const body= document.querySelector('body');
+const formOff = document.getElementById('form_mobile_off');
+const bodyScroll = document.querySelector('body');
 
-menuOn.addEventListener('click', () => {menuMobile.style.display = 'flex';});
-menuOff.addEventListener('click', () => {menuMobile.style.display = 'none';});
-formOn.addEventListener
+menuOn.addEventListener('click', () => {
+  menuMobile.style.display = 'flex';
+});
+menuOff.addEventListener('click', () => {
+  menuMobile.style.display = 'none';
+});
+formOn.addEventListener('click', () => {
+  formMobile.style.display = 'flex';
+  bodyScroll.style.position = 'fixed';
+});
+formOff.addEventListener('click', () => {
+  formMobile.style.display = 'none';
+  bodyScroll.style.position = 'relative';
+});

@@ -869,7 +869,7 @@ button {
   .header {
     height: calc(var(--width-main) * 1.54);
     background: url('../image/main-m.jpg') no-repeat center top / contain #a1a1a1a1;
-    overflow: hidden;
+    z-index: 11;
     }
   .header__title {
     font-size: 28px;
