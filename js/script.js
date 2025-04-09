@@ -23,6 +23,31 @@ prevButton1.addEventListener('click', () => {
 nextButton1.addEventListener('click', () => {
   goToSlide1(currentIndex1 + 1);
 });
+/*blog_slider*/
+const slides2 = document.querySelector('.blog__cards');
+const slideCount2 = document.querySelectorAll('.blog__cards_item').length;
+const prevButton2 = document.querySelector('.blog__bck');
+const nextButton2 = document.querySelector('.blog__frw');
+
+let currentIndex2 = 0;
+
+function goToSlide2(index) {
+  if (index < 0) {
+    index = slideCount2 - 1;
+  } else if (index >= slideCount2) {
+    index = 0;
+  }
+  currentIndex2 = index;
+  slides2.style.transform = `translateX(calc(${-index * 100}vw + ${index * 16}px))`;
+  console.log(currentIndex2);
+}
+
+prevButton2.addEventListener('click', () => {
+  goToSlide2(currentIndex2 - 1);
+});
+nextButton2.addEventListener('click', () => {
+  goToSlide2(currentIndex2 + 1);
+});
 /*impression_slider*/
 const slides3 = document.querySelector('.impressions__cards');
 const slideCount3 = document.querySelectorAll('.impressions__cards_item').length;

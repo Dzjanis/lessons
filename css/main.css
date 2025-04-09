@@ -872,7 +872,6 @@ button {
   .programs__images {
     display: none;
   }
-  /*direction*/
   /*direction_slider*/
   .directions__slider { /*контейнер слайдера*/
     width: calc(var(--width-main) - 48px);
@@ -928,6 +927,49 @@ button {
       left: 10px;
     }
     &.directions__frw {
+      right: 10px;
+    }
+  }
+  /*blog_slider*/
+  .blog__slider { /*контейнер слайдера*/
+    width: calc(var(--width-main) - 32px);
+    overflow: hidden;
+    position: relative;
+  }
+  .blog__cards { /*контейнер для всех слайдов*/
+    width: 800%;
+    display: flex;
+    gap: 16px;
+    transition: transform .5s ease-in-out;
+  }
+  .blog__cards_item { /*карточка*/
+    width: calc(var(--width-main) - 32px);
+    height: calc(var(--width-main) * .9);
+    flex-shrink: 0;
+  }
+  .blog__cards_item img { /*картинка в карточке*/
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .blog__bck, .blog__frw {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 2;
+    &.blog__bck {
+      left: 10px;
+    }
+    &.blog__frw {
       right: 10px;
     }
   }
