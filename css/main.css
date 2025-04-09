@@ -771,9 +771,12 @@ button {
   color: var(--font-color);
   }
 /*adaptive*/
-@media (min-width: 1930px)/* for TV */ {
+@media (min-width: 1920px)/* for TV */ {
   :root {
     --width-main: 1920px;
+    }
+  .header, .footer, .main, .container {
+    width: 100%;
     }
   }
 @media (max-width: 1200px)/* for screen 4:3 */ {

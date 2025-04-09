@@ -73,3 +73,15 @@ prevButton3.addEventListener('click', () => {
 nextButton3.addEventListener('click', () => {
   goToSlide3(currentIndex3 + 1);
 });
+
+/*menu_mobile*/
+const menuMobile = document.querySelector('.nav__list');
+const menuOn = document.getElementById('burger-mobile-on');
+const menuOff = document.getElementById('burger-mobile-off');
+const formOn = document.getElementById('form_mobile_on');
+const formOff = document.getElementById('form_mobile_of')
+const body= document.querySelector('body');
+
+menuOn.addEventListener('click', () => {menuMobile.style.display = 'flex';});
+menuOff.addEventListener('click', () => {menuMobile.style.display = 'none';});
+formOn.addEventListener
