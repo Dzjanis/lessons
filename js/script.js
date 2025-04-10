@@ -85,10 +85,10 @@ const bodyScroll = document.querySelector('body');
 const menuLinks = document.querySelectorAll('.list__item-link');
 
 menuOn.addEventListener('click', () => {
-  menuMobile.style.display = 'flex';
+  menuMobile.classList.add('active');
 });
 menuOff.addEventListener('click', () => {
-  menuMobile.style.display = 'none';
+  menuMobile.classList.remove('active');
 });
 formOn.addEventListener('click', () => {
   formMobile.style.display = 'flex';
@@ -98,8 +98,9 @@ formOff.addEventListener('click', () => {
   formMobile.style.display = 'none';
   bodyScroll.style.position = 'relative';
 });
-menuLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    menuMobile.style.display = 'none';
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuMobile.classList.remove('active');
+    });
   });
-});
