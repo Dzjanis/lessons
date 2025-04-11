@@ -874,7 +874,7 @@ button {
     display: none;
   }
 }
-@media (max-width: 800px) or (pointer: coarse) /* for mobile */ {
+@media (max-width: 800px), (pointer: coarse) and (orientation: portrait) /* for mobile */ {
   :root {
     --width-logo: 10rem;
     --width-add: 92dvw;
