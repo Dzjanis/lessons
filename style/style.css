@@ -784,7 +784,7 @@ button {
   color: var(--font-color);
 }
 /*adaptive*/
-@media (min-width: 1920px)/* for TV */ {
+@media (min-width: 1920px) or (orientation: landscape)/* for TV */ {
   :root {
     --width-main: 1920px;
   }
@@ -792,7 +792,7 @@ button {
     width: 100%;
   }
 }
-@media (max-width: 1200px)/* for screen 4:3 */ {
+@media (max-width: 1200px) or (orientation: landscape)/* for screen 4:3 */ {
   :root {
     --width-add: 95dvw;
     --width-logo: 84px;
@@ -833,7 +833,7 @@ button {
     margin: 0 5px 5px 5px;
   }
 }
-@media (max-width: 800px)/* for tablet */ {
+@media (max-width: 800px) or (orientation: landscape)/* for tablet */ {
   :root {
     --title-font-size: 24px;
     --section-font-size: 12px;
@@ -873,7 +873,7 @@ button {
     display: none;
   }
 }
-@media (max-width: 600px) or (pointer: coarse)/* for mobile */ {
+@media (max-width: 600px) or (pointer: coarse) /* for mobile */ {
   :root {
     --width-logo: 84px;
     --width-add: 92dvw;
