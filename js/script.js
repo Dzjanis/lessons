@@ -82,6 +82,7 @@ const formMobile = document.querySelector('.form__fields')
 const formOn = document.getElementById('form_mobile_on');
 const formOff = document.getElementById('form_mobile_off');
 const bodyScroll = document.querySelector('body');
+const header = document.getElementById('header');
 const menuLinks = document.querySelectorAll('.list__item-link');
 
 menuOn.addEventListener('click', () => {
@@ -92,11 +93,14 @@ menuOff.addEventListener('click', () => {
 });
 formOn.addEventListener('click', () => {
   formMobile.style.display = 'flex';
+  header.style.overflow = 'visible';
   bodyScroll.style.position = 'fixed';
+
 });
 formOff.addEventListener('click', () => {
-  formMobile.style.display = 'none';
-  bodyScroll.style.position = 'relative';
+  formMobile.style.display = '';
+  header.style.overflow = ''
+  bodyScroll.style.position = '';
 });
 
   menuLinks.forEach(link => {

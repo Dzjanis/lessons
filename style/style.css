@@ -948,6 +948,7 @@ button {
     gap: 20px;
     background-color: #000000E5;
     display: none;
+    z-index: 20;
   }
   .form__location, .form__date, .form__participants {
     width: calc(var(--width-add) * 0.5);
