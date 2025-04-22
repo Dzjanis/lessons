@@ -1,8 +1,9 @@
 'use strict'
+
 function toggleActive(element) {
     const link = document.querySelectorAll('.menu__link');
     console.log(link);
-    
+
     link.forEach(link => link.classList.remove('active'));
 
     element.classList.add('active');
@@ -15,16 +16,18 @@ function addActiv(element) {
 
     advLink.forEach(link => {
         const advItem = link.parentElement;
-        if (parent) {advItem.classList.remove('active')}
-        else {console.error('element not found');}
-        })
+        if (parent) {
+            advItem.classList.remove('active')
+        } else {
+            console.error('element not found');
+        }
+    })
 
     const advItem = element.parentElement;
     if (advItem) {
         advItem.classList.add('active')
         console.log(advItem);
-    }
-    else {
+    } else {
         console.error('element not found');
     }
 }
@@ -35,7 +38,8 @@ var value, operator;
 console.log(butNum);
 console.log(displayCurrent);
 butNum.forEach(button => {
-    button.addEventListener('click', () => {console.log('pic');
+    button.addEventListener('click', () => {
+        console.log('pic');
         value = button.value;
         displayCurrent.textContent += (value);
     });
@@ -47,7 +51,7 @@ butFunc.forEach(button => {
     button.addEventListener('click', () => {
         console.log('fpic');
         operator = button.value;
-        displayCurrent.textContent +=(operator);
+        displayCurrent.textContent += (operator);
     });
 });
 
